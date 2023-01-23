@@ -1,0 +1,786 @@
+
+@font-face {
+    font-family: 'Proxima Nova Rg';
+    src: url('./fonts/ProximaNova-Regular.woff2') format('woff2'),
+        url('./fonts/ProximaNova-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('./fonts/ProximaNova-Extrabld.woff2') format('woff2'),
+        url('./fonts/ProximaNova-Extrabld.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Proxima Nova Rg';
+    src: url('./fonts/ProximaNova-Bold.woff2') format('woff2'),
+        url('./fonts/ProximaNova-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+@font-face {
+    font-family: 'Aurelie Smith DEMO';
+    src: url('./fonts/AurelieSmithDEMO.woff2') format('woff2'),
+        url('./fonts/AurelieSmithDEMO.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+/* Keyword values */
+font-smooth: auto;
+font-smooth: never;
+font-smooth: always;
+
+/* <length> value */
+font-smooth: 2em;
+
+body {font-family: 'Proxima Nova Rg'; -webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;}
+
+
+.site-header.topmain {
+    background: transparent;
+    padding: 13px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    width: 100%;
+    transition:all ease 0.5s;
+}
+
+.site-header.topmain.mobexheight.navfixed {
+       padding: 11px 0;
+    /*background: #000; */
+}
+
+
+.site-header.topmain .navbar-brand-img {
+    width: 100%;
+}
+
+.site-header.topmain a.navbar-brand {
+    width: 156px;
+}
+
+.container {
+    max-width: 1920px;
+    padding: 0px 36px;
+}
+
+.site-header.topmain .navbar.navbar-expand-lg {
+    padding: 0 0;
+}
+
+.site-header.topmain .navbar .navbar-nav li a{
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-family: 'Proxima Nova Rg';
+}
+
+.homebannnerk .desktopayout {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.homebannnerk video {
+    width: 100%;
+}
+
+.homebannnerk .desktopayout {
+    display: block;
+}
+
+.homebannnerk .mobstopayout {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.homebannnerk.revealer {
+    height: 658px;
+    overflow: hidden;
+    position: relative;
+}
+
+.whowres {
+    padding: 60px 0;
+    background: #000;
+    height: 100vh;
+}
+
+.whtxt, .whtxt .mnsub, .whtxt p {
+    color: #fff;
+}
+
+.whowres p span{
+     color: #fd6a02;
+}
+
+.mnsub {
+    font-family: 'Proxima Nova Rg';
+    font-weight: 600;
+	font-size: 35px;
+}
+
+.mwd-tx p {
+    max-width: 575px;
+    font-size: 24px;
+    margin: auto;
+	    padding-bottom: 25px;
+}
+
+.strsp {
+    background: url('./images/strokewe.png');
+    background-size: cover;
+    width: 105px;
+    height: 51px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: left;
+    position: relative;
+    left: -7px;
+}
+
+.arrmovsw {
+    position: absolute;
+    top: -7px;
+    right: -100px;
+    max-width: 190px;
+}
+
+.pd-thm {
+    padding: 60px 0;
+}
+
+.mainhd {
+    margin-bottom: 60px;
+}
+
+.mainhd .cntheads span {
+    font-family: 'Aurelie Smith DEMO';
+    font-size: 88px;
+    color: #fd6a02;
+    display: inline-block;
+	font-weight: 100;
+	line-height: 50px;
+}
+
+.mainhd .cntheads {
+    font-family: 'Proxima Nova Rg';
+    font-weight: 600;
+    font-size: 35px;
+}
+
+.vdo-sects h5 {
+    font-family: 'Proxima Nova Rg';
+    font-weight: 600;
+    font-size: 21px;
+	    margin: 20px 0;
+		 transition: all ease 0.5s;
+}
+
+.vdo-sects p, .vdo-sects a {
+    font-family: 'Proxima Nova Rg';
+    font-size: 14px;
+    color: #000;
+    text-decoration: none;
+	 transition: all ease 0.5s;
+}
+
+.latestwrk .vdo-sects {
+    margin-bottom: 10px;
+	position: relative;
+    transition: all ease 0.5s;
+}
+
+.latestwrk  .vdo-sects:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 52%;
+    background: #fff;
+    height: 100%;
+    top:0;
+    z-index: -2;
+	transition: all ease 0.5s;
+}
+
+.latestwrk .vdo-sects:hover{
+    background:#000;
+    cursor: pointer;
+}
+
+/* .latestwrk  .vdo-sects:hover:after{ */
+    /* background-image: -webkit-gradient(linear, left top, left bottom, from(#0e0d0d), color-stop(71%, #fd6a02), to(#c80300));
+    background-image: linear-gradient(180deg, #0e0d0d 29%, #fd6a02 71%, #c80300); */
+	/* background:#000;
+} */
+
+
+.latestwrk  .vdo-sects:hover p,
+.latestwrk  .vdo-sects:hover a{
+    color:#fff
+}
+
+.latestwrk  .vdo-sects:hover h5{
+        color: #fd6a02;
+}
+
+.vdo-sects a {
+    font-family: 'Proxima Nova Rg';
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.vdopls img {
+    cursor: pointer;
+}
+
+.morevdo {
+    padding: 18px 0 0 36px;
+}
+
+.latestwrk .vdo-sects video {
+    width: 100%;
+}
+
+.morevdo .mnsub {
+    font-size: 17px;
+    color: #000;
+}
+
+.morevdo .mnsub .strsp {
+    left: 0;
+    width: 50px;
+    height: 24px;
+    background-size: cover;
+    padding: 0 5px;
+}
+
+.morevdo .mnsub img {
+    width: 20px;
+    position: relative;
+    top: -4px;
+    margin: 0 4px;
+}
+
+.mprojs {
+    height: auto;
+}
+
+.mprojs .item a:hover {
+    text-decoration: none;
+    color: #fff;
+}
+
+.mprojs .item a, .mprojs .item p {
+    color: #fff;
+    font-family: 'Proxima Nova Rg';
+}
+
+.mprojs .item h6 {font-size: 18px;margin: 20px 0 8px 0;}
+
+.mprojs .item p {
+    font-size: 13px;
+}
+
+.mprojs .owl-carousel .owl-item img {
+    transition: all ease 0.5s;
+}
+
+.mprojs .owl-carousel .owl-item:hover img {
+    border-radius: 20px;
+}
+
+.bdorg {
+    width: 100%;
+    height: 3px;
+    border-bottom: 1px solid #fd6a02;
+    margin: 20px 0;
+}
+
+.mprojs .owl-nav {
+    position: relative;
+    top: -305px;
+}
+
+.mprojs .owl-nav button.owl-prev {
+    float: left;
+    left: -40px;
+}
+
+.mprojs .owl-nav button span {
+    font-size: 33px;
+    background: #000;
+    line-height: 15px;
+    width: 26px;
+    height: 26px;
+    display: inline-block;
+    border-radius: 100%;
+    border: 1px solid #fff;
+}
+
+.mprojs .owl-nav button {
+    width: 27px;
+    height: 27px;
+    overflow: hidden;
+}
+
+.mprojs .owl-nav button, .mprojs .owl-theme .owl-nav [class*=owl-]:hover {
+    background: transparent;
+}
+
+.mprojs .owl-nav button.owl-next {
+    float: right;
+    right: -40px;
+}
+
+.mprojs .owl-nav button {
+    position: relative;
+	outline:none;
+}
+
+
+.mnformsty b {
+    font-weight: 400;
+    font-family: 'Proxima Nova Rg';
+    font-size: 14px;
+}
+
+.mnformsty 
+ .form-control {
+    background: transparent;
+    border: none;
+    border-radius: 0px;
+    border-bottom: 1px solid #7a7a7a;
+    padding: 0;
+    height: 26px;
+}
+
+.mnformsty {
+    max-width: 898px;
+    margin: auto;
+}
+
+.mnformsty .ytthemects {
+    display: inline-block;
+    padding: 3px 28px;
+    background: transparent;
+    color: #fff;
+    border: 1px solid #fd6a02;
+    font-family: 'Proxima Nova Rg';
+    margin: 35px 0 0 0;
+    outline: none;
+    border-radius: 3px;
+}
+
+.mnformsty div {
+    padding: 0 6px;
+}
+
+.mnformsty .form-control, .mnformsty label {
+    margin-bottom: 25px;
+	outline:none;
+}
+
+.mnformsty .form-control:focus, .mnformsty .form-control:hover {
+    box-shadow: 0px 1px 0 0px rgb(236 99 2 / 78%);
+    border-bottom: 1px solid transparent;
+}
+
+.movablelines {
+    background: url('./images/arrowstro.png');
+    position: absolute;
+    top: -7px;
+    right: -104px;
+    width: 188px;
+    height: 42px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: linear 0.3s;
+}
+
+.whowres .movablelines:after {
+   width: 120%;
+}
+
+.whowres.aos-init.aos-animate .movablelines:after {
+    content: "";
+    position: absolute;
+    right: -34px;
+    width: 20%;
+    background: #000;
+    height: 88px;
+    transition: all ease 2s;
+	  animation: moveline  linear 2s;
+}
+
+
+
+
+@keyframes moveline{
+	0%{
+		width: 120%; 
+	}
+	100%{
+		width: 20%;
+        
+	}
+}
+
+
+/* Our Work Page */
+
+.workshopareas {
+    padding: 60px 0;
+}
+
+.tabnormcta {
+    text-align: center;
+}
+
+.tabnormcta button {
+    border: none;
+    background: transparent;
+    text-transform: uppercase;
+    font-family: 'Proxima Nova Rg';
+    border-bottom: 2px solid transparent;
+    font-size: 15px;
+}
+
+.tabnormcta button.active {
+    font-family: 'Proxima Nova Rg';
+    font-weight: 600;
+    border-bottom: 2px solid #fd6a02;
+}
+
+.courseallpnsd {
+    margin: 50px 0 0 0;
+}
+
+.courseallpnsd .col-md-4 {
+    margin-bottom: 40px;
+}
+
+.courseallpnsd.vdo-sects.picshots h5 {
+    border-top: 1px solid #000;
+    padding-top: 17px;
+}
+
+.vdo-sects.vddetails h5 {
+    color: #fd6a02;
+	    margin: 0 0 15px 0;
+}
+
+/* footer */
+
+.thmn-footer {
+    padding: 50px 0 0;
+}
+
+.copyrgts p {
+    margin: 0;
+}
+
+.copyrgts {
+    padding: 50px 0 30px;
+    border-bottom: 4px solid #fd6a02;
+}
+
+.thmn-footer h3 {
+    font-size: 17px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #000;
+}
+
+
+
+.thmn-footer  ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+.thmn-footer p, .thmn-footer ul li a {
+    color: #646464;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+.thmn-footer .footer-mail p {
+    font-family: 'Proxima Nova Rg';
+    font-weight: normal;
+    color: #000;
+}
+
+.thmn-footer .mnformsty label, .thmn-footer .mnformsty .form-control, .thmn-footer .mnformsty label b {
+    margin: 0;
+}
+
+.thmn-footer .mnformsty .ytthemects {
+        margin: 0;
+    color: #000;
+    padding: 0 13px;
+    font-size: 15px;
+}
+
+.thmn-footer .mnformsty .form-control {
+    margin-bottom: 20px;
+}
+
+.socials ul {
+    padding: 0;
+	margin:0;
+}
+
+.socials ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.socials ul li a {
+    font-size: 20px;
+    color: #000;
+}
+
+/* new Header types */
+
+.site-header .navbar-light .navbar-toggler {
+    z-index: 9;
+    float: right;
+    position: relative;
+    right: 0px;
+    top: 0px;
+    color: #fff;
+    border-color: rgb(255 255 255 / 0%);
+    outline:none;
+    display: block;
+}
+
+.openhdas .fa-times {
+    display: none;
+}
+
+.openhdas.crossshwos .fa-bars {
+    display: none;
+}
+
+.openhdas.crossshwos .fa-times {
+    display: block;
+}
+
+.menufull {
+        margin-left: auto;
+   
+    opacity: 0;
+    display: flex;
+    visibility: hidden;
+	    position: fixed;
+    background: #000;
+    width: 100%;
+    left: 0;
+    height: 100%;
+    top: 0;
+	border-top-right-radius: 100%;
+    border-bottom-left-radius: 100%;
+	transition:all ease 0.5s;
+}
+
+.navbar-expand-lg .menufull .navbar-nav {
+    display: block;
+    margin: auto;
+}
+
+.site-header.topmain.mobexheight.heightexps .menufull {
+       border-radius: 0%;
+    opacity: 1;
+    visibility: visible;
+	
+}
+
+.site-header.topmain .navbar .navbar-nav li a{
+	    font-size: 28px;
+		    font-family: 'Proxima Nova';
+}
+
+.site-header.topmain .navbar .navbar-nav li.active a {
+    color: #fd6a02;
+}
+
+.videomanys .owl-nav {
+    position: relative;
+    top: -280px;
+}
+
+.videomanys .owl-carousel .owl-nav button {
+    margin: 0;
+    padding: 0;
+    width: 31px;
+    height: 31px;
+    border: 1px solid;
+    border-radius: 100%;
+}
+
+.videomanys .owl-carousel .owl-nav button span {
+    font-size: 40px;
+    line-height: 19px;
+}
+
+.videomanys .owl-carousel .owl-nav  .owl-prev {
+    float: left;
+    position: relative;
+    left: 35px;
+}
+
+.videomanys .owl-carousel .owl-nav .owl-next {
+    float: right;
+    position: relative;
+    right: 35px;
+}
+
+.vdo-sects.vddetails .col-md-12 {
+    margin-bottom: 20px;
+}
+
+.workshopareas.profiledesc .vddetails {
+    margin-top: 0;
+}
+
+
+/* responsive */
+
+@media screen and (max-width: 767px) and (min-width: 320px){
+	.mwd-tx p br {
+    display: none;
+}
+
+.movablelines {
+    display: none;
+}
+
+.site-header .navbar-expand-lg>.container {
+    padding: 0 15px;
+}
+
+.mnformsty .form-control, .mnformsty label {
+    margin-bottom: 10px;
+}
+
+.mnsub {
+    margin-bottom: 40px;
+}
+
+.whowres {
+    height: auto;
+}
+
+.homebannnerk .desktopayout {
+    display: none;
+}
+
+.homebannnerk  .mobstopayout {
+    display: block;
+	    width: 100%;
+}
+
+.homebannnerk video {
+    width: 100%;
+}
+
+.site-header.topmain.heightexps .collapse:not(.show) {
+    display: block;
+    position: fixed;
+    top: 0;
+    background:#000;
+    width: 100%;
+    left: 0;
+    padding: 20px;
+    height: 100vh;
+    transition: all ease 0.5s;
+    transform: translateX(0px);
+    opacity: 1;
+    visibility: visible;
+}
+
+.site-header .navbar-light .navbar-toggler {
+    z-index: 9;
+    float: right;
+    position: absolute;
+    right: 19px;
+    top: 13px;
+    color: #fff;
+    border-color: rgb(255 255 255 / 0%);
+	outline:none;
+}
+
+.site-header.topmain .collapse:not(.show) {
+    position: fixed;
+    top: 0;
+    background: #fff;
+    width: 100%;
+    left: 0;
+    padding: 20px;
+    height: 100vh;
+    transform: translateX(-630px);
+    transition: all ease 0.5s;
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.openhdas .fa-times {
+    display: none;
+}
+
+.openhdas.crossshwos .fa-bars {
+    display: none;
+}
+
+.openhdas.crossshwos .fa-times {
+    display: block;
+}
+
+.mainhd .cntheads {
+    font-size: 23px;
+}
+
+.mainhd .cntheads span {
+    font-size: 63px;
+}
+
+.mainhd {
+    margin-bottom: 30px;
+}
+
+.pd-thm, .whowres {
+    padding: 35px 0;
+}
+
+.mwd-tx p{    font-size: 19px;}
+
+.thmn-footer h3 {
+    margin-bottom: 21px;
+}
+
+}

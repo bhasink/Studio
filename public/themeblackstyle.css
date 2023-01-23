@@ -1,0 +1,27 @@
+body{
+	
+}
+
+.site-header.topmain {
+    
+}
+
+.thmn-footer {
+    background: #000;
+}
+
+.thmn-footer h3 {
+    color: #fff;
+}
+
+.thmn-footer p, .thmn-footer ul li a, .thmn-footer .footer-mail p {
+        color: #cccccc;
+}
+
+.thmn-footer .mnformsty .form-control, .thmn-footer .mnformsty label, .thmn-footer .mnformsty .ytthemects {
+    color: #fff;
+}
+
+.copyrgts {
+    border-bottom: 4px solid #000000;
+}
