@@ -28,8 +28,8 @@ const Header = () => {
         /> */}
 
 
-        <img src="./images/logo.svg" className="navbar-brand-img" alt="logo" />
-        <img src="./images/logoblack.svg" className="navbar-brand-img themeblackonly" alt="logo" />
+        <img src="/images/logo.svg" className="navbar-brand-img" alt="logo" />
+        <img src="/images/logoblack.svg" className="navbar-brand-img themeblackonly" alt="logo" />
       </a>
       {/* Collapse */}
       <div className="collapse navbar-collapse" id="navbarCollapse">

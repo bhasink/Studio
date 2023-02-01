@@ -10,9 +10,11 @@
   },
   "dependencies": {
     "@next/font": "13.1.2",
+    "axios": "^1.2.4",
     "next": "13.1.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-hover-video-player": "^9.7.1"
+    "react-hover-video-player": "^9.7.1",
+    "react-youtube": "^10.1.0"
   }
 }
