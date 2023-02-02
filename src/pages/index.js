@@ -25,6 +25,10 @@ const Index = () => {
 
 
   useEffect(() => {
+
+
+
+
     if (router.isReady) {
       const _id = router.query._id
       getFeaturedItem()
@@ -54,14 +58,14 @@ const Index = () => {
     <>
       <Header />
 
-  <section className="homebannnerk revealer">
+  <section className="blpt homebannnerk revealer">
     {/*<img src="./images/bannerhome.jpg" class="desktopayout img-fluid"> */}
     <video id="vid" playsInline="playsinline" preload="auto" autoPlay="autoplay" muted="muted" loop="loop" className="videoadaptsdesktop">
       <source src="https://uploads-ssl.webflow.com/636e26ef14867fb6ba3be3a6/636e26ef14867fc0aa3be431_Supari_Loop%20291021-transcode.mp4" type="video/mp4" />
     </video>
     {/*<img src="./images/mobbanner.jpg" class="mobstopayout img-fluid">*/}
   </section>
-  <section className="whowres whtxt d-flex section1">
+  <section className="blpt whowres whtxt d-flex section1">
     <div className="container align-self-center">
       <div className="row">
         <div className="col-md-4 text-center position-relative">
@@ -79,7 +83,7 @@ const Index = () => {
     </div>
   </section>
 
-  <section className="latestwrk pd-thm pd-topm">
+  <section className="whtpt latestwrk pd-thm pd-topm">
     <div className="container">
       <div className="mainhd text-center">
         <h4 className="cntheads"><span>Our </span> latest work</h4>
@@ -142,7 +146,7 @@ const Index = () => {
     </div>
   </section>
 
-  <section className="mprojs whowres whtxt">
+  <section className="blpt mprojs whowres whtxt">
     <div className="container align-self-center">
       <div className="mainhd text-center">
         <h4 className="cntheads"><span>Photoshoot </span> projects</h4>
@@ -206,7 +210,7 @@ const Index = () => {
       </div>
     </div>
   </section>
-  <section className="pd-thm workbrn pd-topm">
+  <section className="whtpt pd-thm workbrn pd-topm">
     <div className="container">
       <div className="mainhd text-center">
         <h4 className="cntheads"><span>Brands </span> we work with</h4>
@@ -274,7 +278,7 @@ const Index = () => {
       </div>
     </div>
   </section>
-  <section className="lttalks pd-thm pd-topm">
+  <section className="blpt lttalks pd-thm pd-topm">
     <div className="container align-self-center">
       <div className="mainhd text-center">
         <h4 className="cntheads"><span>Impressed? </span> Let’s talk!</h4>

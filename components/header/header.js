@@ -1,9 +1,17 @@
 import Image from 'next/image'
-
+import { useState,useEffect } from "react"
+import { useRouter } from 'next/router'
 const Header = () => {
+  const [isActive, setActive] = useState("false");
+  const [isActivee, setActivee] = useState("");
+  const router = useRouter()
+
+  const handleToggle = () => {
+    setActive(!isActive);
+  };
 
     return (
-    <header className="site-header topmain mobexheight norm norm heightexp">
+    <header className={`site-header topmain mobexheight norm ${isActive ? "" : "heightexps"}`}>
   <nav className="navbar navbar-expand-lg navbar-light">    
     <div className="container">
       {/* Brand */}
@@ -29,8 +37,11 @@ const Header = () => {
 
 
         <img src="/images/logo.svg" className="navbar-brand-img" alt="logo" />
-        <img src="/images/logoblack.svg" className="navbar-brand-img themeblackonly" alt="logo" />
+        <img src="/images/logoblack.svg" className="navbar-brand-img" alt="logo" />
       </a>
+
+
+      
       {/* Collapse */}
       <div className="collapse navbar-collapse" id="navbarCollapse">
         <div className="menufull">
@@ -56,10 +67,10 @@ const Header = () => {
         </div>
       </div>
       {/* Toggler */}
-      <button className="navbar-toggler openhdas" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <i className="fal fa-bars" />
-        <i className="fal fa-times" />
-      </button>
+      <button  onClick={handleToggle} className={`navbar-toggler openhdas ${isActive ? "" : "crossshwos"}`}  type="button" >
+              <i className="fal fa-bars" />
+              <i className="fal fa-times" />
+            </button>
     </div>
   </nav>
 </header>

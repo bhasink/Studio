@@ -181,7 +181,7 @@ const WorkDetails = () => {
       <div className="courseallpnsd vdo-sects vddetails">
         <div className="row">
           <div className="col-md-12">
-            <h5>Objective</h5>
+            <h5> Objective</h5>
             <p>Refresh and recharge with BroCode with a dip of nostalgia. </p>
           </div>
           <div className="col-md-12">
