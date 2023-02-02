@@ -26,7 +26,6 @@ import 'lightgallery/css/lg-thumbnail.css'
 
 import lgThumbnail from 'lightgallery/plugins/thumbnail'
 import lgZoom from 'lightgallery/plugins/zoom'
-import { Gallery } from "react-grid-gallery";
 
 const WorkDetails = () => {
   const [WorkDetails, setWorkDetails] = useState([])
@@ -145,8 +144,6 @@ const images = [
   return (
     <>
       <Header />
-
-      <Gallery images={images} />
 
 
       {WorkDetails && WorkDetails != null && (
