@@ -11,10 +11,15 @@
   "dependencies": {
     "@next/font": "13.1.2",
     "axios": "^1.2.4",
+    "jquery": "^3.6.3",
+    "lightgallery": "^2.7.1",
     "next": "13.1.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-grid-gallery": "^1.0.0",
     "react-hover-video-player": "^9.7.1",
+    "react-html-parser": "^2.0.2",
+    "react-owl-carousel": "^2.3.3",
     "react-youtube": "^10.1.0"
   }
 }
