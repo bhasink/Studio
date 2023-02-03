@@ -2,8 +2,9 @@ body{
 	
 }
 
-.site-header.topmain {
-    
+.site-header.topmain,
+.site-header.topmain.mobexheight.navfixed {
+    background: #000  !important;
 }
 
 .thmn-footer {

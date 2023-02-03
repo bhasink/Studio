@@ -6,6 +6,8 @@ import Image from 'next/image'
 import HoverVideoPlayer from 'react-hover-video-player'
 import { useRouter } from 'next/router'
 import axios from 'axios'
+import Head from 'next/head'
+
 
 const Work = () => {
   const [productionData, setProductionData] = useState([])
@@ -121,7 +123,10 @@ const Work = () => {
 
   return (
     <>
-      <Header />
+      <Header/>
+      <Head>
+        <link rel="stylesheet" type="text/css" href="/themeblackstyle.css" />
+      </Head>
 
       <section className="workshopareas">
         <div className="container">

@@ -1,7 +1,41 @@
 import Image from 'next/image'
 import { useState,useEffect } from "react"
 import { useRouter } from 'next/router'
+import Link from 'next/link'
 const Header = () => {
+
+
+  useEffect(() => {
+    var lastScrollTop = 0;
+$(window).scroll(function(event){
+   var st = $(this).scrollTop();
+   if (st > lastScrollTop){
+       //âíèç
+	   $('.topmain').addClass('scrolling_down');
+	   $('.topmain').removeClass('scrolling_up');
+   } else {
+      // ââåðõ 
+	   $('.topmain').addClass('scrolling_up');
+	   $('.topmain').removeClass('scrolling_down');
+   }
+   lastScrollTop = st;
+})
+
+$(function() {
+  var nav = $(".norm");
+  $(window).scroll(function() {    
+      var scroll = $(window).scrollTop();
+  
+      if (scroll >= 50) {
+          nav.removeClass('norm').addClass("navfixed");
+      } else {
+          nav.removeClass("navfixed").addClass('norm');
+      }
+  });
+});
+    
+  }, [])
+
   const [isActive, setActive] = useState("false");
   const [isActivee, setActivee] = useState("");
   const router = useRouter()
@@ -37,7 +71,7 @@ const Header = () => {
 
 
         <img src="/images/logo.svg" className="navbar-brand-img" alt="logo" />
-        <img src="/images/logoblack.svg" className="navbar-brand-img" alt="logo" />
+       {/*<img src="/images/logoblack.svg" className="navbar-brand-img" alt="logo" /> */} 
       </a>
 
 
@@ -48,12 +82,12 @@ const Header = () => {
           {/* Navigation */}
           <ul className="navbar-nav ml-auto  position-relative" id="menu-center">
             <li className="nav-item  active">
-              <a className="nav-link" href="services.html">Home
-              </a>
+              <Link className="nav-link" href="/">Home
+              </Link>
             </li>
             <li className="nav-item submno">
-              <a className="nav-link" href="#">OUR WORK
-              </a>
+              <Link className="nav-link" href="/work">OUR WORK
+              </Link>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#">Clients

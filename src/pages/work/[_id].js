@@ -4,6 +4,7 @@ import Header from '../../../components/header/header'
 import Footer from '../../../components/footer/footer'
 import { useRouter } from 'next/router'
 import axios from 'axios'
+import Head from 'next/head'
 import YouTube from 'react-youtube'
 import ReactHtmlParser from 'react-html-parser'
 var $ = require('jquery')
@@ -144,11 +145,14 @@ const images = [
   return (
     <>
       <Header />
+      <Head>
+        <link rel="stylesheet" type="text/css" href="/themeblackstyle.css" />
+      </Head>
 
       {WorkDetails && WorkDetails != null && (
         <>
-          <section className="mt-5 pd-5">
-            <div className="mainhd text-center mt-5 mb-0">
+          <section className="mt-5 pd-5 gallerybooths">
+            <div className="mainhd text-center">
               <h4 className="cntheads">
                 {WorkDetails.name}{' '}
                 <span>
