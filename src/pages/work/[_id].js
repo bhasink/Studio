@@ -149,7 +149,6 @@ const images = [
         <link rel="stylesheet" type="text/css" href="/themeblackstyle.css" />
       </Head>
 
-
       {WorkDetails && WorkDetails != null && (
         <>
           <section className="mt-5 pd-5 gallerybooths">

@@ -8,7 +8,6 @@ import { useRouter } from 'next/router'
 import axios from 'axios'
 import Head from 'next/head'
 
-
 const Work = () => {
   const [productionData, setProductionData] = useState([])
   const [courseMode, setCourseMode] = useState('production')
@@ -123,7 +122,7 @@ const Work = () => {
 
   return (
     <>
-      <Header/>
+      <Header />
       <Head>
         <link rel="stylesheet" type="text/css" href="/themeblackstyle.css" />
       </Head>
@@ -141,16 +140,6 @@ const Work = () => {
             >
               Production
             </button>
-         {/*   <button
-              onClick={() => filtersLoadMore('short-video')}
-              className={
-                courseMode == 'short-video'
-                  ? 'btn-group btn-group-toggle active'
-                  : 'btn-group btn-group-toggle'
-              }
-            >
-              Short videos
-            </button> */}
             <button
               onClick={() => filtersLoadMore('animation')}
               className={
@@ -173,8 +162,13 @@ const Work = () => {
             </button>
           </div>
 
-
-          <div className="courseallpnsd vdo-sects picshots">
+          <div
+            className={
+              courseMode == 'photoshoot'
+                ? 'courseallpnsd vdo-sects picshots'
+                : 'courseallpnsd vdo-sects'
+            }
+          >
             <div className="row">
               {productionData &&
                 productionData.map((production, key) => (
@@ -188,7 +182,7 @@ const Work = () => {
                     />
                     <h5>{production.name}</h5>
                     <p>{production.short_desc}</p>
-                    <Link  href={`work/${production.slug}`}>Read More</Link>
+                    <Link href={`work/${production.slug}`}>Read More</Link>
                   </div>
                 ))}
             </div>
@@ -212,17 +206,12 @@ const Work = () => {
             </div>
           )}
 
-
           {total <= 0 && (
             <div className="text-center pt-4">
-             <p> Oops! No data available!!</p>
+              <p> Oops! No data available!!</p>
             </div>
           )}
-
         </div>
-
-
-
       </section>
 
       <Footer />
