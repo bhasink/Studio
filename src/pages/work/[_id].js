@@ -145,7 +145,6 @@ const images = [
     <>
       <Header />
 
-
       {WorkDetails && WorkDetails != null && (
         <>
           <section className="mt-5 pd-5">

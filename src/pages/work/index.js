@@ -137,16 +137,6 @@ const Work = () => {
               Production
             </button>
             <button
-              onClick={() => filtersLoadMore('short-video')}
-              className={
-                courseMode == 'short-video'
-                  ? 'btn-group btn-group-toggle active'
-                  : 'btn-group btn-group-toggle'
-              }
-            >
-              Short videos
-            </button>
-            <button
               onClick={() => filtersLoadMore('animation')}
               className={
                 courseMode == 'animation'
