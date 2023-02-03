@@ -6,10 +6,22 @@ import Image from 'next/image'
 import HoverVideoPlayer from 'react-hover-video-player'
 import { useRouter } from 'next/router'
 import axios from 'axios'
+var $ = require('jquery')
+if (typeof window !== 'undefined') {
+  window.$ = window.jQuery = require('jquery')
+}
+import 'owl.carousel/dist/assets/owl.carousel.css'
+import 'owl.carousel/dist/assets/owl.theme.default.css'
+import dynamic from 'next/dynamic'
+const OwlCarousel = dynamic(() => import('react-owl-carousel'), {
+  ssr: false,
+})
 
 const Index = () => {
 
   const [featuredItem, setFeaturedItem] = useState([])
+  const [featuredItemShoot, setFeaturedItemShoot] = useState([])
+
   const router = useRouter()
 
   useEffect(() => {
@@ -26,9 +38,6 @@ const Index = () => {
 
   useEffect(() => {
 
-
-
-
     if (router.isReady) {
       const _id = router.query._id
       getFeaturedItem()
@@ -43,15 +52,60 @@ const Index = () => {
         `${process.env.NEXT_PUBLIC_API}/featured-work`,
       )
 
-      const getF_data = data.data.get_featured_work
+      console.log(data)
 
+      const getF_data = data.data.get_featured_work
+      const getF_data_Shoot = data.data.get_featured_work_shoot
+      
       setFeaturedItem(getF_data)
+      setFeaturedItemShoot(getF_data_Shoot)
 
       console.log(data)
     } catch (err) {
       console.log(err)
     }
   }
+
+  const state = {
+    responsive_hrngcomps: {
+      0: {
+        items: 1,
+        nav: false,
+        dots: true,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        autoplayHoverPause: true,
+        loop: true,
+      },
+      300: {
+        items: 3,
+        nav: false,
+        dots: true,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        autoplayHoverPause: true,
+        loop: true,
+      },
+
+      766: {
+        items: 3,
+        nav: false,
+        dots: false,
+        loop: true,
+      },
+
+      1200: {
+        items: 6,
+        nav: false,
+        dots: true,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        autoplayHoverPause: true,
+        center: false,
+      },
+    },
+  }
+
 
 
   return (
@@ -127,7 +181,7 @@ const Index = () => {
           <div className="col-md-6">
             <h5>{featuredItm.name}</h5>
             <p>{featuredItm.short_desc}</p>
-                <Link href="#">
+            <Link  href={`work/${featuredItm.slug}`}>
                 Read More</Link>
           </div>
         </div>
@@ -151,63 +205,33 @@ const Index = () => {
       <div className="mainhd text-center">
         <h4 className="cntheads"><span>Photoshoot </span> projects</h4>
       </div>
-      <div className="whygridsphn owl-carousel owl-theme">
+
+
+      <OwlCarousel
+                  className="whygridsphn owl-carousel owl-theme"
+                  loop
+                  responsive={state.responsive_hrngcomps}
+                  nav
+                >
+
+{featuredItemShoot &&
+                  featuredItemShoot.map((featuredItemSht, key) => (
         <div className="item">
-          <a href="#">
-            <img src="./images/ourworkthmbs/photoshoot1.jpg" />
+           <Link  href={`work/${featuredItemSht.slug}`}>
+            <img   src={
+                        `${process.env.NEXT_PUBLIC_B_API}work/images/thumbnail/` +
+                        featuredItemSht.thumbnail
+                      }
+                       />
             <div className="bdorg" />
-            <h6>Twenty Dresses</h6>
-            <p>We did this shoot as an extension of the
-              video campaign we shot. We adapted the
-              same tonality and messaging in these
-              quirky stills</p>
-          </a>
+            <h6>{featuredItemSht.name}</h6>
+            <p>{featuredItemSht.short_desc.substring(0, 50)} ...</p>
+          </Link>
         </div>
-        <div className="item">
-          <a href="#">
-            <img src="./images/ourworkthmbs/photoshoot2.jpg" />
-            <div className="bdorg" />
-            <h6>Twenty Dresses</h6>
-            <p>We did this shoot as an extension of the
-              video campaign we shot. We adapted the
-              same tonality and messaging in these
-              quirky stills</p>
-          </a>
-        </div>
-        <div className="item">
-          <a href="#">
-            <img src="./images/ourworkthmbs/photoshoot3.jpg" />
-            <div className="bdorg" />
-            <h6>Twenty Dresses</h6>
-            <p>We did this shoot as an extension of the
-              video campaign we shot. We adapted the
-              same tonality and messaging in these
-              quirky stills</p>
-          </a>
-        </div>
-        <div className="item">
-          <a href="#">
-            <img src="./images/ourworkthmbs/photoshoot4.jpg" />
-            <div className="bdorg" />
-            <h6>Twenty Dresses</h6>
-            <p>We did this shoot as an extension of the
-              video campaign we shot. We adapted the
-              same tonality and messaging in these
-              quirky stills</p>
-          </a>
-        </div>
-        <div className="item">
-          <a href="#">
-            <img src="./images/ourworkthmbs/photoshoot5.jpg" />
-            <div className="bdorg" />
-            <h6>Twenty Dresses</h6>
-            <p>We did this shoot as an extension of the
-              video campaign we shot. We adapted the
-              same tonality and messaging in these
-              quirky stills</p>
-          </a>
-        </div>
-      </div>
+
+    ))}
+      
+     </OwlCarousel>
     </div>
   </section>
   <section className="whtpt pd-thm workbrn pd-topm">
