@@ -66,7 +66,7 @@ const WorkDetails = () => {
 
   const opts = {
     height: '450',
-    width: '80%',
+    width: '50%',
     playerVars: {
       autoplay: 1,
       modestbranding: 1,

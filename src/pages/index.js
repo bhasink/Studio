@@ -180,7 +180,7 @@ const Index = () => {
           </div>
           <div className="col-md-6">
             <h5>{featuredItm.name}</h5>
-            {/* <p>{featuredItm.short_desc.substring(0, 2)}</p> */}
+            <p>{featuredItm.short_desc}</p>
             <Link  href={`work/${featuredItm.slug}`}>
                 Read More</Link>
           </div>
@@ -225,7 +225,7 @@ const Index = () => {
                        />
             <div className="bdorg" />
             <h6>{featuredItemSht.name}</h6>
-            <p>{featuredItemSht.short_desc}</p>
+            <p>{featuredItemSht.short_desc.substring(0, 50)} ...</p>
           </Link>
         </div>
 
