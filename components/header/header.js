@@ -6,6 +6,9 @@ const Header = () => {
 
 
   useEffect(() => {
+
+    
+
     var lastScrollTop = 0;
 $(window).scroll(function(event){
    var st = $(this).scrollTop();
@@ -78,33 +81,33 @@ $(function() {
       
       {/* Collapse */}
       <div className="collapse navbar-collapse" id="navbarCollapse">
-        <div className="menufull">
+         {/*<div className="menufull"> */}
           {/* Navigation */}
           <ul className="navbar-nav ml-auto  position-relative" id="menu-center">
-            <li className="nav-item  active">
+           {/** <li className="nav-item  active">
               <Link className="nav-link" href="/">Home
               </Link>
-            </li>
+            </li> */}
             <li className="nav-item submno">
-              <Link className="nav-link" href="/work">OUR WORK
+              <Link onClick={handleToggle} className={`nav-link ${isActive ? "" : ""}`} href="/work">WORK
               </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">Clients
-              </a>
+              <Link onClick={handleToggle} className={`nav-link ${isActive ? "" : ""}`} href="/#clients">Clients
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">Get in Touch
-              </a>
+              <Link onClick={handleToggle} className={`nav-link ${isActive ? "" : ""}`}  href="/#getintouch">Get in Touch
+              </Link>
             </li>
           </ul>
-        </div>
+        
       </div>
       {/* Toggler */}
       <button  onClick={handleToggle} className={`navbar-toggler openhdas ${isActive ? "" : "crossshwos"}`}  type="button" >
               <i className="fal fa-bars" />
               <i className="fal fa-times" />
-            </button>
+            </button> 
     </div>
   </nav>
 </header>
