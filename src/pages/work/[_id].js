@@ -30,6 +30,7 @@ import lgZoom from 'lightgallery/plugins/zoom'
 
 const WorkDetails = () => {
   const [WorkDetails, setWorkDetails] = useState([])
+  const [galleryImages, setGalleryImages] = useState([])
   const router = useRouter()
 
   useEffect(() => {
@@ -54,12 +55,16 @@ const WorkDetails = () => {
       )
 
       const getWorkDetails = data.get_work_details
+      const gallery_original_image = getWorkDetails.gallery_original_image.split(
+        ',',
+      )
 
       if (getWorkDetails == null) {
         router.push('/404')
       }
 
       setWorkDetails(getWorkDetails)
+      setGalleryImages(gallery_original_image)
     } catch (err) {
       console.log(err)
     }
@@ -104,7 +109,7 @@ const WorkDetails = () => {
       },
 
       1200: {
-        items: 6,
+        items: 5,
         nav: false,
         dots: true,
         autoplay: true,
@@ -115,32 +120,9 @@ const WorkDetails = () => {
     },
   }
 
-  
-const images = [
-    {
-       src: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_b.jpg",
-       width: 320,
-       height: 174,
-       isSelected: true,
-       caption: "After Rain (Jeshu John - designerspics.com)",
-    },
-    {
-       src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-       width: 320,
-       height: 212,
-       tags: [
-          { value: "Ocean", title: "Ocean" },
-          { value: "People", title: "People" },
-       ],
-       alt: "Boats (Jeshu John - designerspics.com)",
-    },
- 
-    {
-       src: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg",
-       width: 320,
-       height: 212,
-    },
- ];
+  const Itm = (itm) => {
+    $('#' + itm).trigger('click')
+  }
 
   return (
     <>
@@ -163,6 +145,23 @@ const images = [
               </h4>
             </div>
             <div className="videomanys">
+           
+              <LightGallery speed={500} plugins={[lgThumbnail, lgZoom]}>
+                {galleryImages &&
+                  galleryImages.map((gImage, key) => (
+                    <div
+                      id={'item' + key}
+                      className="item"
+                      href={`${process.env.NEXT_PUBLIC_B_API}work/images/gallery_thumbnail_original/${gImage}`}
+                    >
+                      <img style={{'display':"none"}}
+                        alt="img1"
+                        src={`${process.env.NEXT_PUBLIC_B_API}work/images/gallery_thumbnail_res/${gImage}`}
+                      />
+                    </div>
+                  ))}
+              </LightGallery>
+
               {WorkDetails.file_type == 'photoshoot' ? (
                 <OwlCarousel
                   className="videopgsl owl-carousel owl-theme"
@@ -170,39 +169,15 @@ const images = [
                   responsive={state.responsive_hrngcomps}
                   nav
                 >
-                  <LightGallery speed={500} plugins={[lgThumbnail, lgZoom]}>
-                    <div
-                      className="item"
-                      href={`${process.env.NEXT_PUBLIC_B_API}work/images/gallery_thumbnail_original/1.jpg`}
-                    >
+                  {galleryImages &&
+                    galleryImages.map((gImage, key) => (
                       <img
-                        alt="img1"
-                        src={`${process.env.NEXT_PUBLIC_B_API}work/images/gallery_thumbnail_original/1.jpg`}
+                        onClick={() => Itm('item' + key)}
+                        className="item"
+                        alt={gImage}
+                        src={`${process.env.NEXT_PUBLIC_B_API}work/images/gallery_thumbnail_res/${gImage}`}
                       />
-                    </div>
-
-                  <div
-                    className="item"
-                    href={`${process.env.NEXT_PUBLIC_B_API}work/images/gallery_thumbnail_original/1.jpg`}
-                  >
-                    <img
-                      alt="img1"
-                      src={`${process.env.NEXT_PUBLIC_B_API}work/images/gallery_thumbnail_original/1.jpg`}
-                    />
-                  </div>
-
-                  <div
-                    className="item"
-                    href={`${process.env.NEXT_PUBLIC_B_API}work/images/gallery_thumbnail_original/1.jpg`}
-                  >
-                    <img
-                      alt="img1"
-                      src={`${process.env.NEXT_PUBLIC_B_API}work/images/gallery_thumbnail_original/1.jpg`}
-                    />
-                  </div>
-
-                  </LightGallery>
-
+                    ))}
                 </OwlCarousel>
               ) : (
                 <YouTube videoId={WorkDetails.original_video} opts={opts} />
