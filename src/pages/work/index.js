@@ -174,6 +174,7 @@ const Work = () => {
                 productionData.map((production, key) => (
                   <div key={key} className="col-md-4">
                     <div className='laysets'>
+                      <div className='photolyers'>
                     <img
                       src={
                         `${process.env.NEXT_PUBLIC_B_API}work/images/thumbnail/` +
@@ -181,6 +182,7 @@ const Work = () => {
                       }
                       className="img-fluid"
                     />
+                    </div>
                     <h5>{production.name}</h5>
                     <p>{production.short_desc}</p>
                     <Link href={`work/${production.slug}`}>Read More</Link>

@@ -93,8 +93,10 @@ const WorkDetails = () => {
       },
       300: {
         items: 3,
-        nav: false,
-        dots: true,
+        margin:10,
+        autoWidth: true,
+        nav: true,
+        dots: false,
         autoplay: true,
         autoplaySpeed: 3000,
         autoplayHoverPause: true,
@@ -109,9 +111,11 @@ const WorkDetails = () => {
       },
 
       1200: {
-        items: 5,
-        nav: false,
-        dots: true,
+        items: 4,
+        nav: true,
+        margin:10,
+        autoWidth: true,
+        dots: false,
         autoplay: true,
         autoplaySpeed: 3000,
         autoplayHoverPause: true,

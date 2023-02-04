@@ -372,7 +372,10 @@ body {font-family: 'Proxima Nova Rg'; -webkit-font-smoothing: antialiased;
         display: block !important;
     }
     
-    
+    .latestwrk .vdo-sects:hover {
+        background: #000;
+    }
+
     /* css for Third Fold Ends Here */
     
     
@@ -656,7 +659,7 @@ body {font-family: 'Proxima Nova Rg'; -webkit-font-smoothing: antialiased;
         top: -180px;
     }
     
-    .videomanys .owl-carousel .owl-nav button {
+    .videomanys .owl-carousel.owl-theme .owl-nav button {
         margin: 0;
         padding: 0;
         width: 43px;
@@ -714,9 +717,9 @@ body {font-family: 'Proxima Nova Rg'; -webkit-font-smoothing: antialiased;
     }
     
     .videomanys .videopgsl{
-        transform: rotate(-1deg);
+        /*transform: rotate(-1deg); */
         overflow: hidden;
-        padding: 26px 0px 0 0;
+        padding: 0px 0px 0 0;
         width: 100%;
     }
 
@@ -1143,5 +1146,39 @@ body {font-family: 'Proxima Nova Rg'; -webkit-font-smoothing: antialiased;
     .container{
         padding: 0px 26px;
     }
+
+    .videomanys .owl-carousel.videopgsl {
+        height: 282px;
+    }
+
+    .latestwrk .vdo-sects:hover {
+        background: transparent;
+    }
+
+    .latestwrk .vdo-sects{
+        margin-bottom: 25px;
+    }
     
+    }
+
+
+    .laysets:hover img {
+        transform: scale(1.2);
+    }
+    
+    .laysets {
+        transition: all ease 1s;
+        overflow: hidden;
+    }
+    
+    .laysets img {
+        transition: all ease 0.5s;
+    }
+    
+    .photolyers {
+        overflow: hidden;
+    }
+
+    .videomanys .owl-carousel.videopgsl {
+        height: 282px;
     }
