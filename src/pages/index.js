@@ -78,9 +78,9 @@ const Index = () => {
         loop: true,
       },
       300: {
-        items: 3,
-        nav: false,
-        dots: true,
+        items: 1,
+        nav: true,
+        dots: false,
         autoplay: true,
         autoplaySpeed: 3000,
         autoplayHoverPause: true,
@@ -95,9 +95,10 @@ const Index = () => {
       },
 
       1200: {
-        items: 6,
-        nav: false,
-        dots: true,
+        items: 4,
+        margin:30,
+        nav: true,
+        dots: false,
         autoplay: true,
         autoplaySpeed: 3000,
         autoplayHoverPause: true,
@@ -234,7 +235,7 @@ const Index = () => {
      </OwlCarousel>
     </div>
   </section>
-  <section className="whtpt pd-thm workbrn pd-topm">
+  <section className="whtpt pd-thm workbrn pd-topm" id='clients'>
     <div className="container">
       <div className="mainhd text-center">
         <h4 className="cntheads"><span>Brands </span> we work with</h4>
@@ -302,7 +303,7 @@ const Index = () => {
       </div>
     </div>
   </section>
-  <section className="blpt lttalks pd-thm pd-topm">
+  <section className="blpt lttalks pd-thm pd-topm" id='getintouch'>
     <div className="container align-self-center">
       <div className="mainhd text-center">
         <h4 className="cntheads"><span>Impressed? </span> Let’s talk!</h4>

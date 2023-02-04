@@ -18,14 +18,20 @@ const Footer = () => {
             <div className="col-md-3">
               <h3>Work</h3>
               <ul>
-                <li><a href="#">Production</a></li>
-                <li><a href="#">Photoshoot</a></li>
-                <li><a href="#">Animation</a></li>
-                <li><a href="#">Short videos</a></li>
+                <li><Link href="/work">Production</Link></li>
+                <li><Link href="/work">Photoshoot</Link></li>
+                <li><Link href="/work">Animation</Link></li>
+                
               </ul>
             </div>
             <div className="col-md-2">
-              <h3>Clients</h3>
+              <h3>Quick Links</h3>
+              <ul>
+                <li><Link href="/work">Work</Link></li>
+                <li><Link href="/#clients">Clients</Link></li>
+                <li><Link href="/#getintouch">Get in Touch</Link></li>
+                
+              </ul>
             </div>
             {/* <div className="col-md-5">
               <h3>Newsletter</h3>
