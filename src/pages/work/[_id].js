@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import Header from '../../../components/header/header'
-import Footer from '../../../components/footer/footer'
+import Header2 from '../../../components/header/header2'
+import Footer2 from '../../../components/footer/footer2'
 import { useRouter } from 'next/router'
 import axios from 'axios'
 import Head from 'next/head'
@@ -130,7 +130,7 @@ const WorkDetails = () => {
 
   return (
     <>
-      <Header />
+      <Header2 />
       <Head>
         <link rel="stylesheet" type="text/css" href="/themeblackstyle.css" />
       </Head>
@@ -200,7 +200,7 @@ const WorkDetails = () => {
         </>
       )}
 
-      <Footer />
+      <Footer2 />
     </>
   )
 }
