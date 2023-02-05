@@ -8,14 +8,14 @@ const Footer = () => {
       <div className="row">
         <div className="col-md-8 col-6">
           <div className="row">
-            <div className="col-md-3 col-12">
+            <div className="col-md-4 col-12">
               <h3>About Us</h3>
               <ul>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Terms &amp; Privacy Policies</a></li>
               </ul>
             </div>
-            <div className="col-md-3 col-12">
+            <div className="col-md-4 col-12">
               <h3>Work</h3>
               <ul>
                 <li><Link href="/work">Production</Link></li>
@@ -24,7 +24,7 @@ const Footer = () => {
                 
               </ul>
             </div>
-            <div className="col-md-2 col-12">
+            <div className="col-md-4 col-12">
               <h3>Quick Links</h3>
               <ul>
                 <li><Link href="/work">Work</Link></li>

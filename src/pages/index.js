@@ -28,7 +28,7 @@ const Index = () => {
     const [red, green, blue] = [253, 106, 2]
     const section1 = document.querySelector('.section1')
     window.addEventListener('scroll', () => {
-      let y = 1 + (window.scrollY || window.pageYOffset) / 150
+      let y = 1 + (window.scrollY || window.pageYOffset) / 30
       y = y < 1 ? 1 : y
       const [r, g, b] = [red / y, green / y, blue / y].map(Math.round)
       section1.style.backgroundColor = `rgb(${r}, ${g}, ${b})`

@@ -836,8 +836,12 @@ body {font-family: 'Proxima Nova Rg'; -webkit-font-smoothing: antialiased;
         background-color: rgb(255, 255, 255);
       }
       
-      .whowres, .lttalks {
+      .lttalks, .whowres.mprojs{
         background: #000000;
+      }
+
+      .whowres{
+        background: rgb(253, 106, 2);
       }
       
       .mnformsty .form-control, .mnformsty label {
@@ -1157,6 +1161,18 @@ body {font-family: 'Proxima Nova Rg'; -webkit-font-smoothing: antialiased;
 
     .latestwrk .vdo-sects{
         margin-bottom: 25px;
+    }
+
+    .workshopareas{
+        padding: 60px 0;
+    }
+
+    .socials {
+        margin-bottom: 20px;
+    }
+
+    .copyrgts{
+        padding: 30px 0 30px;
     }
     
     }

@@ -4,8 +4,26 @@ body{
 
 .site-header.topmain,
 .site-header.topmain.mobexheight.navfixed {
-    background: #000  !important;
+    background: #000 !important ;
 }
+/*
+.site-header.lighttheme.topmain,
+.site-header.lighttheme.topmain.navfixed{
+    background: white  !important;
+}
+
+.site-header.topmain.lighttheme.topmain.navfixed {
+    box-shadow: #f1f1f1 0px 0px 8px 0px;
+}
+
+.site-header.topmain.lighttheme .navbar .navbar-nav li a {
+    color: #000;
+}
+
+
+.site-header.topmain.lighttheme .navbar-light .navbar-toggler {
+    color: #000;
+}*/
 
 .thmn-footer {
     background: #000;

@@ -6,16 +6,16 @@ const Footer2 = () => {
   <div className="desktop-footer">
     <div className="container">
       <div className="row">
-        <div className="col-md-8">
+        <div className="col-md-8 col-6">
           <div className="row">
-            <div className="col-md-3">
+            <div className="col-md-4 col-12">
               <h3>About Us</h3>
               <ul>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Terms &amp; Privacy Policies</a></li>
               </ul>
             </div>
-            <div className="col-md-3">
+            <div className="col-md-4 col-12">
               <h3>Work</h3>
               <ul>
                 <li><a href="#">Production</a></li>
@@ -24,8 +24,14 @@ const Footer2 = () => {
                 <li><a href="#">Short videos</a></li>
               </ul>
             </div>
-            <div className="col-md-2">
-              <h3>Clients</h3>
+            <div className="col-md-4 col-12">
+              <h3>Quick Links</h3>
+              <ul>
+                <li><Link href="/work">Work</Link></li>
+                <li><Link href="/#clients">Clients</Link></li>
+                <li><Link href="/#getintouch">Get in Touch</Link></li>
+                
+              </ul>
             </div>
             {/* <div className="col-md-5">
               <h3>Newsletter</h3>
@@ -48,7 +54,7 @@ const Footer2 = () => {
             </div> */}
           </div>
         </div>
-        <div className="col-md-4">
+        <div className="col-md-4 col-6">
           <div className="footer-mail">
             <p className="locn">Delhi</p>
             <p>Red Brick Centre, 2nd Floor, Plot No,<br />
@@ -62,7 +68,7 @@ const Footer2 = () => {
         </div>
       </div>
     </div>
-    <div className="copyrgts">
+    <div className="copyrgts text-center text-lg-left">
       <div className="container">
         <div className="row">
           <div className="col-md-4">

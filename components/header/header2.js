@@ -45,7 +45,7 @@ $(function() {
   };
 
     return (
-    <header className={`site-header topmain mobexheight norm ${isActive ? "" : "heightexps"}`}>
+    <header className={`site-header lighttheme topmain mobexheight norm ${isActive ? "" : "heightexps"}`}>
   <nav className="navbar navbar-expand-lg navbar-light">    
     <div className="container">
       {/* Brand */}
@@ -68,10 +68,10 @@ $(function() {
           height={37}
           priority
         /> */}
+<img src="/images/logo.svg" className="navbar-brand-img" alt="logo" />
 
-
-        <img src="/images/logo.svg" className="navbar-brand-img" alt="logo" />
-       {/*<img src="/images/logoblack.svg" className="navbar-brand-img" alt="logo" /> */} 
+         {/*<img src="/images/logoblack.svg" className="navbar-brand-img" alt="logo" /> 
+      */} 
       </a>
 
 
