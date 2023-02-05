@@ -165,7 +165,6 @@ const WorkDetails = () => {
               {WorkDetails.file_type == 'photoshoot' ? (
                 <OwlCarousel
                   className="videopgsl owl-carousel owl-theme"
-                  loop
                   responsive={state.responsive_hrngcomps}
                   nav
                 >
