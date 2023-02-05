@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import Header2 from '../../../components/header/header2'
-import Footer2 from '../../../components/footer/footer2'
+import Header from '../../../components/header/header'
+import Footer from '../../../components/footer/footer'
 import { useRouter } from 'next/router'
 import axios from 'axios'
 import Head from 'next/head'
@@ -93,8 +93,10 @@ const WorkDetails = () => {
       },
       300: {
         items: 3,
-        nav: false,
-        dots: true,
+        margin:10,
+        autoWidth: true,
+        nav: true,
+        dots: false,
         autoplay: true,
         autoplaySpeed: 3000,
         autoplayHoverPause: true,
@@ -109,9 +111,11 @@ const WorkDetails = () => {
       },
 
       1200: {
-        items: 5,
-        nav: false,
-        dots: true,
+        items: 4,
+        nav: true,
+        margin:10,
+        autoWidth: true,
+        dots: false,
         autoplay: true,
         autoplaySpeed: 3000,
         autoplayHoverPause: true,
@@ -126,7 +130,7 @@ const WorkDetails = () => {
 
   return (
     <>
-      <Header2 />
+      <Header />
       <Head>
         <link rel="stylesheet" type="text/css" href="/themeblackstyle.css" />
       </Head>
@@ -195,7 +199,7 @@ const WorkDetails = () => {
         </>
       )}
 
-      <Footer2 />
+      <Footer />
     </>
   )
 }

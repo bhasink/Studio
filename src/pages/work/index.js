@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import Header2 from '../../../components/header/header2'
-import Footer2 from '../../../components/footer/footer2'
+import Header from '../../../components/header/header'
+import Footer from '../../../components/footer/footer'
 import Image from 'next/image'
 import HoverVideoPlayer from 'react-hover-video-player'
 import { useRouter } from 'next/router'
@@ -122,7 +122,7 @@ const Work = () => {
 
   return (
     <>
-      <Header2 />
+      <Header />
       <Head>
         <link rel="stylesheet" type="text/css" href="/themeblackstyle.css" />
       </Head>
@@ -174,6 +174,7 @@ const Work = () => {
                 productionData.map((production, key) => (
                   <div key={key} className="col-md-4">
                     <div className='laysets'>
+                      <div className='photolyers'>
                     <img
                       src={
                         `${process.env.NEXT_PUBLIC_B_API}work/images/thumbnail/` +
@@ -181,6 +182,7 @@ const Work = () => {
                       }
                       className="img-fluid"
                     />
+                    </div>
                     <h5>{production.name}</h5>
                     <p>{production.short_desc}</p>
                     <Link href={`work/${production.slug}`}>Read More</Link>
@@ -216,7 +218,7 @@ const Work = () => {
         </div>
       </section>
 
-      <Footer2 />
+      <Footer />
     </>
   )
 }
