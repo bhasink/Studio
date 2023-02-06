@@ -113,10 +113,11 @@ const Index = () => {
     <>
       <Header />
 
+
   <section className="blpt homebannnerk revealer">
     {/*<img src="./images/bannerhome.jpg" class="desktopayout img-fluid"> */}
     <video id="vid" playsInline="playsinline" preload="auto" autoPlay="autoplay" muted="muted" loop="loop" className="videoadaptsdesktop">
-      <source src="/images/mainvideo.mp4" type="video/mp4" />
+      <source src="/images/mainvideo.mp4?v=2" type="video/mp4" />
     </video>
     {/*<img src="./images/mobbanner.jpg" class="mobstopayout img-fluid">*/}
   </section>
