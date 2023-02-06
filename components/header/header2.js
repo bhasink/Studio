@@ -3,12 +3,6 @@ import { useState,useEffect } from "react"
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 
-var $ = require('jquery')
-if (typeof window !== 'undefined') {
-  window.$ = window.jQuery = require('jquery')
-}
-
-
 const Header2 = () => {
 
 
