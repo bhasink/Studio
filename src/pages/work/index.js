@@ -7,7 +7,7 @@ import HoverVideoPlayer from 'react-hover-video-player'
 import { useRouter } from 'next/router'
 import axios from 'axios'
 import Head from 'next/head'
-import ContentLoader, { Facebook } from 'react-content-loader'
+import ContentLoader from 'react-content-loader'
 
 const Work = () => {
   const [productionData, setProductionData] = useState([])
