@@ -199,7 +199,7 @@ const Work = () => {
                  
 <div key={key} className='col-md-4 aa fadeq' id={'hover-target-app'+key}>
                     <div className='laysets'>
-                      <div className='photolyers'>
+                      <div className='photolyers vdopls'>
 
 
             {production.file_type == 'photoshoot' && (           
