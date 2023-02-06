@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Header2 from '../../../components/header/header2'
 import Footer2 from '../../../components/footer/footer2'
-import Image from 'next/image'
 import HoverVideoPlayer from 'react-hover-video-player'
 import { useRouter } from 'next/router'
 import axios from 'axios'
@@ -196,9 +195,14 @@ const Work = () => {
 
               {productionData &&
                 productionData.map((production, key) => (
-                  <div key={key} className='col-md-4 aa fadeq  '>
+                 
+<div key={key} className='col-md-4 aa fadeq' id={'hover-target-app'+key}>
                     <div className='laysets'>
                       <div className='photolyers'>
+
+
+            {production.file_type == 'photoshoot' && (           
+                 
                     <img
                       src={
                         `${process.env.NEXT_PUBLIC_B_API}work/images/thumbnail/` +
@@ -206,6 +210,44 @@ const Work = () => {
                       }
                       className="img-fluid"
                     />
+
+                    )} 
+
+
+{production.file_type == 'animation' || production.file_type == 'production' ? (           
+              
+<HoverVideoPlayer
+           videoSrc={
+            `${process.env.NEXT_PUBLIC_B_API}work/videos/short-video/` +
+            production.short_video
+          }   
+          hoverTarget={() => document.getElementById("hover-target-app"+key)}               
+          loadingStateTimeout={1000}
+                    pausedOverlay={
+                      <img
+                        src={
+                            `${process.env.NEXT_PUBLIC_B_API}work/images/thumbnail/` +
+                            production.thumbnail
+                          }          
+                          className="img-fluid"
+                          style={{
+                          width: '100%',
+                          height: '100%',
+                          objectFit: 'cover',
+                        }}
+                      />
+                    }
+                    loadingOverlay={
+                      <div className="loading-overlay">Loading...</div>
+                    }
+                    restartOnPaused
+                    preload="metadata"
+                  />
+
+): ""}
+
+
+
                     </div>
                     <h5>{production.name}</h5>
                     <p>{production.short_desc}</p>
@@ -215,6 +257,7 @@ const Work = () => {
                 ))}
 </>
                   )}
+                  
 
 
             </div>
