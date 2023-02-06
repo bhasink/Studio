@@ -55,9 +55,16 @@ const WorkDetails = () => {
       )
 
       const getWorkDetails = data.get_work_details
-      const gallery_original_image = getWorkDetails.gallery_original_image.split(
+      var gallery_original_image;
+
+      if(getWorkDetails.gallery_original_image != ''){
+       gallery_original_image = getWorkDetails.gallery_original_image.split(
         ',',
+      
       )
+      }else{
+         gallery_original_image = 0;
+      }
 
       if (getWorkDetails == null) {
         router.push('/404')
@@ -160,6 +167,9 @@ const WorkDetails = () => {
             </div>
             <div className="videomanys">
            
+            {galleryImages.length > 0 && (
+<>
+
               <LightGallery speed={500} plugins={[lgThumbnail, lgZoom]}>
                 {galleryImages &&
                   galleryImages.map((gImage, key) => (
@@ -176,10 +186,7 @@ const WorkDetails = () => {
                   ))}
               </LightGallery>
 
-              {WorkDetails && WorkDetails.file_type == 'photoshoot' && (
-                <>
-
-
+          
 <OwlCarousel
                   className="videopgsl owl-carousel owl-theme"
                   responsive={state.responsive_hrngcomps}
@@ -195,11 +202,12 @@ const WorkDetails = () => {
                       />
                     ))}
                 </OwlCarousel>
-            
-</>
-                )} 
 
-{WorkDetails && WorkDetails.file_type == 'production' && (
+                </>
+
+            )}
+
+{WorkDetails.file_type == 'production' && (
                 <>
 
 <YouTube videoId={WorkDetails.original_video} opts={opts} />
@@ -207,7 +215,7 @@ const WorkDetails = () => {
 </>
                 )} 
 
-{WorkDetails && WorkDetails.file_type == 'animation' && (
+{WorkDetails.file_type == 'animation' && (
                 <>
 
 <YouTube videoId={WorkDetails.original_video} opts={opts} />
