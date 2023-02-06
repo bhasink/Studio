@@ -149,7 +149,7 @@ const Index = () => {
     {featuredItem &&
                   featuredItem.map((featuredItm, key) => (
   
-    <div className="vdo-sects">
+    <div className="vdo-sects" id={'hover-target'+key}>
       <div className="container">
         <div className="row">
           <div className="col-md-6 vdopls">
@@ -157,7 +157,8 @@ const Index = () => {
            videoSrc={
             `${process.env.NEXT_PUBLIC_B_API}work/videos/short-video/` +
             featuredItm.short_video
-          }                    
+          }   
+          hoverTarget={() => document.getElementById("hover-target"+key)}                 
           loadingStateTimeout={1000}
                     pausedOverlay={
                       <img
