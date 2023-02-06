@@ -349,7 +349,7 @@ body {font-family: 'Proxima Nova Rg'; -webkit-font-smoothing: antialiased;
     .latestwrk .vdo-sects {
         margin-bottom: 10px;
         position: relative;
-        transition: all ease 0.5s;
+        transition: all ease 1s;
         z-index: 4;
     }
     
@@ -962,7 +962,7 @@ body {font-family: 'Proxima Nova Rg'; -webkit-font-smoothing: antialiased;
         height: 100%;
         top: 0;
         z-index: -2;
-        transition: all ease 0.5s;
+        transition: all ease 1s;
       }
       
       .mprojs .item a, .mprojs .item p,
