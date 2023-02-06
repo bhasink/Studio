@@ -31,31 +31,34 @@ function MyApp({ Component, pageProps }) {
         }
     })
     
-    return (<>
+//     return (<>
 
     
 
-    {loading == true ? (
-        <div className='spinner-wrapper'>
-               <div className='sub-lg'>
-                <div className='lgo'>
-                <img src="/images/logo.svg" className="navbar-brand-img" alt="logo" />
+//     {loading == true ? (
+//         <div className='spinner-wrapper'>
+//                <div className='sub-lg'>
+//                 <div className='lgo'>
+//                 <img src="/images/logo.svg" className="navbar-brand-img" alt="logo" />
 
-                <span>
-                </span>
+//                 <span>
+//                 </span>
                 
-                </div>
-                </div>
-</div>
-          ) :
-    (
-        <>
-   <Component {...pageProps} />
+//                 </div>
+//                 </div>
+// </div>
+//           ) :
+//     (
+//         <>
+//    <Component {...pageProps} />
 
-        </>
-    )}
+//         </>
+//     )}
     
-    </>)
+//     </>)
+
+return (<><Loading/><Component {...pageProps} /></>)
+
   }
 
 export default MyApp
