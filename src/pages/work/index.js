@@ -14,7 +14,7 @@ const Work = () => {
   const [filterCoursesLastPage, setFilterCoursesLastPage] = useState(false)
   const [loader, setLoader] = useState(false)
   const [loaderN, setLoaderN] = useState(false)
-  const [currentPageFilter, setCurrentPageFilter] = useState(2)
+  const [currentPageFilter, setCurrentPageFilter] = useState(1)
   const [total, setTotal] = useState(1)
   const router = useRouter()
 
@@ -35,6 +35,7 @@ const Work = () => {
       const get_production_data = data.data.get_production_data.data
       setProductionData(get_production_data)
       setTotal(data.data.get_production_data.total)
+      setCurrentPageFilter(2)
 
       console.log(data)
     } catch (err) {
@@ -93,7 +94,7 @@ const Work = () => {
   
 
   const filtersLoadMoreData = async (data) => {
-    setCurrentPageFilter(currentPageFilter)
+    setCurrentPageFilter(currentPageFilter+1)
     setLoader(true)
 
     try {
