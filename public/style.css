@@ -532,6 +532,8 @@ body {font-family: 'Proxima Nova Rg'; -webkit-font-smoothing: antialiased;
     
     .thmn-footer {
         padding: 50px 0 0;
+        position: sticky;
+        bottom: 0;
     }
     
     .copyrgts p {
@@ -609,6 +611,12 @@ body {font-family: 'Proxima Nova Rg'; -webkit-font-smoothing: antialiased;
     
     .workshopareas {
         padding: 60px 0;
+        background: #fff;
+    }
+
+    section {
+        position: relative;
+        z-index: 4;
     }
     
     .tabnormcta {
