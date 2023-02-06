@@ -1,27 +1,61 @@
+import '../../styles/globals.css'
+import { useState, useEffect } from 'react'
 import Head from 'next/head'
+import { useRouter } from 'next/router';
+import { CircularProgressbar } from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
 
 function MyApp({ Component, pageProps }) {
 
-  return (
-    <>
+    const router = useRouter();
+  
+    const [loading, setLoading] = useState(true);
 
-      <Head>
+    useEffect(() =>{
+        setTimeout(() => setLoading(false), 1000);
+    })
 
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0" />
-        <title>SWA Studios</title>
-        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css?ver=5.3.2" rel="stylesheet" type="text/css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
-        <link href="https://kit-pro.fontawesome.com/releases/v5.11.2/css/pro.min.css?ver=5.3.2" rel="stylesheet" type="text/css" />
-        <link rel="stylesheet" type="text/css" href="../../style.css" />
-        
-      </Head>
+    useEffect(() => {
+    
+        const handleStart = (url) => (url !== router.asPath) && setLoading(true);
+        const handleComplete = (url) => (url === router.asPath) && setTimeout(() =>{setLoading(false)},1000);
+  
+        router.events.on('routeChangeStart', handleStart)
+        router.events.on('routeChangeComplete', handleComplete)
+        router.events.on('routeChangeError',  handleComplete)
+  
+        return () => {
+            router.events.off('routeChangeStart', handleStart)
+            router.events.off('routeChangeComplete', handleComplete)
+            router.events.off('routeChangeError', handleComplete)
+        }
+    })
+    
+    return (<>
 
-      <Component {...pageProps} />
+    
 
-    </>
-  )
-}
+    {loading == true ? (
+        <div className='spinner-wrapper'>
+               <div className='sub-lg'>
+                <div className='lgo'>
+                <img src="/images/logo.svg" className="navbar-brand-img" alt="logo" />
+
+                <span>
+                </span>
+                
+                </div>
+                </div>
+</div>
+          ) :
+    (
+        <>
+   <Component {...pageProps} />
+
+        </>
+    )}
+    
+    </>)
+  }
 
 export default MyApp
