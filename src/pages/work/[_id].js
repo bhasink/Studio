@@ -144,7 +144,17 @@ const WorkDetails = () => {
                 <span>
                   {WorkDetails.file_type == 'photoshoot'
                     ? 'Photoshoot'
-                    : 'Video'}
+                    : ''}
+
+{WorkDetails.file_type == 'animation'
+                    ? 'Video'
+                    : ''}
+
+{WorkDetails.file_type == 'production'
+                    ? 'Video'
+                    : ''}
+
+
                 </span>{' '}
               </h4>
             </div>
@@ -166,8 +176,11 @@ const WorkDetails = () => {
                   ))}
               </LightGallery>
 
-              {WorkDetails.file_type == 'photoshoot' ? (
-                <OwlCarousel
+              {WorkDetails && WorkDetails.file_type == 'photoshoot' && (
+                <>
+
+
+<OwlCarousel
                   className="videopgsl owl-carousel owl-theme"
                   responsive={state.responsive_hrngcomps}
                   nav
@@ -182,11 +195,31 @@ const WorkDetails = () => {
                       />
                     ))}
                 </OwlCarousel>
-              ) : (
-                <YouTube videoId={WorkDetails.original_video} opts={opts} />
-              )}
+            
+</>
+                )} 
+
+{WorkDetails && WorkDetails.file_type == 'production' && (
+                <>
+
+<YouTube videoId={WorkDetails.original_video} opts={opts} />
+
+</>
+                )} 
+
+{WorkDetails && WorkDetails.file_type == 'animation' && (
+                <>
+
+<YouTube videoId={WorkDetails.original_video} opts={opts} />
+
+</>
+                )} 
+
             </div>
           </section>
+
+
+
           <section className="workshopareas profiledesc">
             <div className="container">
               <div className="courseallpnsd vdo-sects vddetails">
