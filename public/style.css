@@ -18,12 +18,12 @@ body {font-family: 'Proxima Nova Rg'; -webkit-font-smoothing: antialiased;
     }
 
     .aa{
-        transition: all 0.4s linear;
+        transition: all 0.5s linear;
     }
       
      
     .fadeq {
-        animation-duration: 1s;
+        animation-duration: 0.5s;
         animation-name: fadeIn;
         animation-iteration-count: 1;
         animation-timing-function: ease-in-out;
