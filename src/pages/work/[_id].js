@@ -81,7 +81,7 @@ const WorkDetails = () => {
     height: '450',
     width: '50%',
     playerVars: {
-      autoplay: 1,
+      autoplay: 0,
       modestbranding: 1,
       rel: 0,
     },
