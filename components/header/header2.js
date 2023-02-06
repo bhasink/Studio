@@ -49,7 +49,7 @@ $(function() {
   <nav className="navbar navbar-expand-lg navbar-light">    
     <div className="container">
       {/* Brand */}
-      <a className="navbar-brand" href="./">
+      <Link className="navbar-brand" href="/">
 
       {/* <Image
           className="navbar-brand-img"
@@ -72,7 +72,7 @@ $(function() {
 
          {/*<img src="/images/logoblack.svg" className="navbar-brand-img" alt="logo" /> 
       */} 
-      </a>
+      </Link>
 
 
       

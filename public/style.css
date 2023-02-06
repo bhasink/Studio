@@ -16,8 +16,29 @@ body {font-family: 'Proxima Nova Rg'; -webkit-font-smoothing: antialiased;
     -webkit-font-smoothing:always;
     -webkit-font-smoothing:2em;
     }
+
+    .aa{
+        transition: all 0.4s linear;
+    }
+      
      
-    
+    .fadeq {
+        animation-duration: 1s;
+        animation-name: fadeIn;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-in-out;
+    }
+      
+      @keyframes fadeIn {
+        0% {
+            opacity: 0;
+            visibility: hidden;
+          }
+          100% {
+            opacity: 1;
+            visibility: visible;
+          }
+      }
     
     /* Css for Website Header */
     

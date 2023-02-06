@@ -7,15 +7,16 @@ import HoverVideoPlayer from 'react-hover-video-player'
 import { useRouter } from 'next/router'
 import axios from 'axios'
 import Head from 'next/head'
+import ContentLoader, { Facebook } from 'react-content-loader'
 
 const Work = () => {
   const [productionData, setProductionData] = useState([])
   const [courseMode, setCourseMode] = useState('production')
   const [filterCoursesLastPage, setFilterCoursesLastPage] = useState(false)
   const [loader, setLoader] = useState(false)
+  const [loaderN, setLoaderN] = useState(false)
   const [currentPageFilter, setCurrentPageFilter] = useState(1)
   const [total, setTotal] = useState(1)
-
   const router = useRouter()
 
   useEffect(() => {
@@ -25,6 +26,8 @@ const Work = () => {
       //   console.log(router.query)
     }
   }, [router.isReady])
+
+  
 
   const listing = async () => {
     try {
@@ -44,6 +47,7 @@ const Work = () => {
     let type
     setFilterCoursesLastPage(false)
     setCurrentPageFilter(2)
+    setLoaderN(true)
 
     if (data == 'production') {
       type = 'production'
@@ -79,11 +83,15 @@ const Work = () => {
       setProductionData(get_work)
       setTotal(data.data.get_work.total)
 
+      setLoaderN(false)
+
       console.log(data)
     } catch (err) {
       console.log(err)
+      setLoaderN(false)
     }
   }
+  
 
   const filtersLoadMoreData = async (data) => {
     setCurrentPageFilter(currentPageFilter + 1)
@@ -170,9 +178,25 @@ const Work = () => {
             }
           >
             <div className="row">
+            
+            {loaderN ? (
+              
+              <ContentLoader     viewBox="0 0 700 250">
+                
+              <rect x="12" y="" rx="2" ry="2" width="211" height="211" />
+              <rect x="240" y="0" rx="2" ry="2" width="211" height="211" />
+              <rect x="467" y="0" rx="2" ry="2" width="211" height="211" />
+              <rect x="12" y="283" rx="2" ry="2" width="211" height="211" />
+              <rect x="240" y="281" rx="2" ry="2" width="211" height="211" />
+              <rect x="468" y="279" rx="2" ry="2" width="211" height="211" />     
+                             </ContentLoader>
+                  ) : (
+           
+                    <>
+
               {productionData &&
                 productionData.map((production, key) => (
-                  <div key={key} className="col-md-4">
+                  <div key={key} className='col-md-4 aa fadeq  '>
                     <div className='laysets'>
                       <div className='photolyers'>
                     <img
@@ -189,6 +213,10 @@ const Work = () => {
                     </div>
                   </div>
                 ))}
+</>
+                  )}
+
+
             </div>
           </div>
 
