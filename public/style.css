@@ -954,32 +954,13 @@ body {font-family: 'Proxima Nova Rg'; -webkit-font-smoothing: antialiased;
         color: #000000;
       }
       
-      .latestwrk .vdo-sects:after {
-        content: "";
-        position: absolute;
-        right: 0;
-        width: 52%;
-        height: 100%;
-        top: 0;
-        z-index: -2;
-        transition: all ease 0.5s;
-      }
       
       .mprojs .item a, .mprojs .item p,
       .latestwrk .vdo-sects:hover p, .latestwrk .vdo-sects:hover a {
         color: #ffffff;
         font-family: Proxima Nova Rg;
       }
-      
-      .latestwrk .vdo-sects:after {
-        background: #ffffff;
-      }
-      
-      .latestwrk .vdo-sects:hover:after {
-        /* background-image: -webkit-gradient(linear, left top, left bottom, from(#0e0d0d), color-stop(71%, #fd6a02), to(#c80300));
-        background-image: linear-gradient(180deg, #0e0d0d 29%, #fd6a02 71%, #c80300); */
-        background: #000000;
-      }
+     
       
       /* Dark Mode Themeification */
       body.darkmodethmon {
@@ -1034,10 +1015,6 @@ body {font-family: 'Proxima Nova Rg'; -webkit-font-smoothing: antialiased;
       /* responsive */
     
     @media screen and (max-width: 767px) and (min-width: 320px){
-
-        .latestwrk .vdo-sects:hover:after{
-            background: transparent;
-        }
 
         .latestwrk .vdo-sects:hover p, .latestwrk .vdo-sects:hover a {
             color: #000000;
