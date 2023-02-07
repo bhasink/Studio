@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
-import Header from '../../components/header/header'
-import Footer from '../../components/footer/footer'
+import Header2 from '../../components/header/header2'
+import Footer2 from '../../components/footer/footer2'
 import Image from 'next/image'
 import HoverVideoPlayer from 'react-hover-video-player'
 import { useRouter } from 'next/router'
 import axios from 'axios'
+import Head from 'next/head'
 var $ = require('jquery')
 if (typeof window !== 'undefined') {
   window.$ = window.jQuery = require('jquery')
@@ -209,9 +210,11 @@ const Thanks = () => {
 
   return (
     <>
-      <Header />
+      <Header2 />
 
-
+      <Head>
+        <link rel="stylesheet" type="text/css" href="/themeblackstyle.css" />
+      </Head>
 
   <section className="blpt whowres whtxt d-flex section1">
     <div className="container align-self-center">
@@ -233,7 +236,7 @@ const Thanks = () => {
     </div>
   </section>
 
-  <Footer />
+  <Footer2 />
 
 
     

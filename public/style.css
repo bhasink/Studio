@@ -270,7 +270,7 @@ body {font-family: 'Proxima Nova Rg'; -webkit-font-smoothing: antialiased;
     }
     
     .strsp {
-        background: url('./images/strokewe.png');
+        background: url('https://api.swstudios.in/images/strokewe.png');
         background-size: cover;
         width: 105px;
         height: 51px;
@@ -297,7 +297,7 @@ body {font-family: 'Proxima Nova Rg'; -webkit-font-smoothing: antialiased;
     }
     
     .movablelines {
-        background: url('./images/arrowstro.png');
+        background: url('https://api.swstudios.in/images/arrowstro.png');
         position: absolute;
         top: -7px;
         right: -104px;
