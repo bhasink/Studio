@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-import Link from 'next/link'
 import Header from '../../../components/header/header'
 import Footer from '../../../components/footer/footer'
 import { useRouter } from 'next/router'
@@ -195,6 +194,7 @@ const WorkDetails = () => {
                   {galleryImages &&
                     galleryImages.map((gImage, key) => (
                       <img
+                      key={key}
                         onClick={() => Itm('item' + key)}
                         className="item"
                         alt={gImage}

@@ -29,7 +29,7 @@ body {font-family: 'Proxima Nova Rg'; -webkit-font-smoothing: antialiased;
         animation-timing-function: ease-in-out;
     }
 
-    .brl{
+       .brl{
         opacity: 0;
         will-change: transform;
     }
@@ -270,7 +270,7 @@ body {font-family: 'Proxima Nova Rg'; -webkit-font-smoothing: antialiased;
     }
     
     .strsp {
-        background: url('https://api.swstudios.in/images/strokewe.png');
+        background: url('./images/strokewe.png');
         background-size: cover;
         width: 105px;
         height: 51px;
@@ -297,7 +297,7 @@ body {font-family: 'Proxima Nova Rg'; -webkit-font-smoothing: antialiased;
     }
     
     .movablelines {
-        background: url('https://api.swstudios.in/images/arrowstro.png');
+        background: url('./images/arrowstro.png');
         position: absolute;
         top: -7px;
         right: -104px;
@@ -833,28 +833,28 @@ body {font-family: 'Proxima Nova Rg'; -webkit-font-smoothing: antialiased;
 
     @font-face {
         font-family: "Proxima Nova Rg";
-        src: url("/fonts/ProximaNova-Regular.woff2") format("woff2"), url("https://api.swstudios.in/fonts/ProximaNova-Regular.woff") format("woff");
+        src: url("./fonts/ProximaNova-Regular.woff2") format("woff2"), url("./fonts/ProximaNova-Regular.woff") format("woff");
         font-weight: normal;
         font-style: normal;
         font-display: swap;
       }
       @font-face {
         font-family: "Proxima Nova";
-        src: url("https://api.swstudios.in/fonts/ProximaNova-Extrabld.woff2") format("woff2"), url("https://api.swstudios.in/fonts/ProximaNova-Extrabld.woff") format("woff");
+        src: url("./fonts/ProximaNova-Extrabld.woff2") format("woff2"), url("./fonts/ProximaNova-Extrabld.woff") format("woff");
         font-weight: bold;
         font-style: normal;
         font-display: swap;
       }
       @font-face {
         font-family: "Proxima Nova Rg";
-        src: url("https://api.swstudios.in/fonts/ProximaNova-Bold.woff2") format("woff2"), url("https://api.swstudios.in/fonts/ProximaNova-Bold.woff") format("woff");
+        src: url("./fonts/ProximaNova-Bold.woff2") format("woff2"), url("./fonts/ProximaNova-Bold.woff") format("woff");
         font-weight: bold;
         font-style: normal;
         font-display: swap;
       }
       @font-face {
         font-family: "Aurelie Smith DEMO";
-        src: url("https://api.swstudios.in/fonts/AurelieSmithDEMO.woff2") format("woff2"), url("https://api.swstudios.in/fonts/AurelieSmithDEMO.woff") format("woff");
+        src: url("./fonts/AurelieSmithDEMO.woff2") format("woff2"), url("./fonts/AurelieSmithDEMO.woff") format("woff");
         font-weight: normal;
         font-style: normal;
         font-display: swap;
