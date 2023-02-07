@@ -18,6 +18,7 @@
     "next": "13.1.2",
     "photoswipe": "^5.3.5",
     "react": "18.2.0",
+    "react-animate-on-scroll": "^2.1.5",
     "react-circular-progressbar": "^2.1.0",
     "react-content-loader": "^6.2.0",
     "react-dom": "18.2.0",
@@ -26,8 +27,11 @@
     "react-html-parser": "^2.0.2",
     "react-owl-carousel": "^2.3.3",
     "react-remove-scroll-bar": "^2.3.4",
+    "react-slick": "^0.29.0",
     "react-youtube": "^10.1.0",
+    "scrollreveal": "^4.0.9",
     "shortid": "^2.2.16",
+    "swiper": "^9.0.3",
     "yet-another-react-lightbox": "^2.2.7"
   }
 }

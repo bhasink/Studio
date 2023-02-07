@@ -21,6 +21,9 @@
   display: none;
 }
 
+.swiper-slide {
+  width: auto !important;
+}
 
 .spinner {
   position: absolute;

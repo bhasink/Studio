@@ -10,12 +10,14 @@ var $ = require('jquery')
 if (typeof window !== 'undefined') {
   window.$ = window.jQuery = require('jquery')
 }
-import 'owl.carousel/dist/assets/owl.carousel.css'
-import 'owl.carousel/dist/assets/owl.theme.default.css'
-import dynamic from 'next/dynamic'
-const OwlCarousel = dynamic(() => import('react-owl-carousel'), {
-  ssr: false,
-})
+import { Swiper, SwiperSlide } from 'swiper/react'
+
+// Import Swiper styles
+import 'swiper/css'
+import 'swiper/css/pagination'
+import 'swiper/css/navigation'
+
+import { FreeMode, Navigation, Pagination } from 'swiper'
 
 import LightGallery from 'lightgallery/react'
 
@@ -54,15 +56,14 @@ const WorkDetails = () => {
       )
 
       const getWorkDetails = data.get_work_details
-      var gallery_original_image;
+      var gallery_original_image
 
-      if(getWorkDetails.gallery_original_image != ''){
-       gallery_original_image = getWorkDetails.gallery_original_image.split(
-        ',',
-      
-      )
-      }else{
-         gallery_original_image = 0;
+      if (getWorkDetails.gallery_original_image != '') {
+        gallery_original_image = getWorkDetails.gallery_original_image.split(
+          ',',
+        )
+      } else {
+        gallery_original_image = 0
       }
 
       if (getWorkDetails == null) {
@@ -99,7 +100,7 @@ const WorkDetails = () => {
       },
       300: {
         items: 3,
-        margin:10,
+        margin: 10,
         autoWidth: true,
         nav: true,
         dots: false,
@@ -119,7 +120,7 @@ const WorkDetails = () => {
       1200: {
         items: 4,
         nav: true,
-        margin:10,
+        margin: 10,
         autoWidth: true,
         dots: false,
         autoplay: true,
@@ -132,6 +133,16 @@ const WorkDetails = () => {
 
   const Itm = (itm) => {
     $('#' + itm).trigger('click')
+  }
+
+  const settings = {
+    className: 'slider variable-width',
+    dots: true,
+    infinite: true,
+    centerMode: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    variableWidth: true,
   }
 
   return (
@@ -148,85 +159,73 @@ const WorkDetails = () => {
               <h4 className="cntheads">
                 {WorkDetails.name}{' '}
                 <span>
-                  {WorkDetails.file_type == 'photoshoot'
-                    ? 'Photoshoot'
-                    : ''}
+                  {WorkDetails.file_type == 'photoshoot' ? 'Photoshoot' : ''}
 
-{WorkDetails.file_type == 'animation'
-                    ? 'Video'
-                    : ''}
+                  {WorkDetails.file_type == 'animation' ? 'Video' : ''}
 
-{WorkDetails.file_type == 'production'
-                    ? 'Video'
-                    : ''}
-
-
+                  {WorkDetails.file_type == 'production' ? 'Video' : ''}
                 </span>{' '}
               </h4>
             </div>
             <div className="videomanys">
-           
-            {galleryImages.length > 0 && (
-<>
+              {galleryImages.length > 0 && (
+                <>
+                  <LightGallery speed={500} plugins={[lgThumbnail]}>
+                    {galleryImages &&
+                      galleryImages.map((gImage, key) => (
+                        <div
+                          id={'item' + key}
+                          className="item"
+                          href={`${process.env.NEXT_PUBLIC_B_API}work/images/gallery_thumbnail_original/${gImage}`}
+                        >
+                          <img
+                            style={{ display: 'none' }}
+                            alt={WorkDetails.name}
+                            src={`${process.env.NEXT_PUBLIC_B_API}work/images/gallery_thumbnail_res/${gImage}`}
+                          />
+                        </div>
+                      ))}
+                  </LightGallery>
 
-              <LightGallery speed={500} plugins={[lgThumbnail, lgZoom]}>
-                {galleryImages &&
-                  galleryImages.map((gImage, key) => (
-                    <div
-                      id={'item' + key}
-                      className="item"
-                      href={`${process.env.NEXT_PUBLIC_B_API}work/images/gallery_thumbnail_original/${gImage}`}
-                    >
-                      <img style={{'display':"none"}}
-                        alt="img1"
-                        src={`${process.env.NEXT_PUBLIC_B_API}work/images/gallery_thumbnail_res/${gImage}`}
-                      />
-                    </div>
-                  ))}
-              </LightGallery>
-
-          
-<OwlCarousel
-                  className="videopgsl owl-carousel owl-theme"
-                  responsive={state.responsive_hrngcomps}
-                  nav
-                >
-                  {galleryImages &&
-                    galleryImages.map((gImage, key) => (
-                      <img
-                      key={key}
-                        onClick={() => Itm('item' + key)}
-                        className="item"
-                        alt={gImage}
-                        src={`${process.env.NEXT_PUBLIC_B_API}work/images/gallery_thumbnail_res/${gImage}`}
-                      />
-                    ))}
-                </OwlCarousel>
-
+                  <Swiper
+                    slidesPerView={'auto'}
+                    spaceBetween={10}
+                    freeMode={true}
+                    slidesOffsetAfter={0}
+                    navigation={true}
+                    modules={[Pagination, Navigation, FreeMode]}
+                    className="mySwiper"
+                    grabCursor={true}
+                  >
+                    {galleryImages &&
+                      galleryImages.map((gImage, key) => (
+                        <SwiperSlide>
+                          <img
+                            key={key}
+                            onClick={() => Itm('item' + key)}
+                            className="item"
+                            alt={gImage}
+                            src={`${process.env.NEXT_PUBLIC_B_API}work/images/gallery_thumbnail_res/${gImage}`}
+                          />
+                        </SwiperSlide>
+                      ))}
+                  </Swiper>
                 </>
+              )}
 
-            )}
-
-{WorkDetails.file_type == 'production' && (
+              {WorkDetails.file_type == 'production' && (
                 <>
+                  <YouTube videoId={WorkDetails.original_video} opts={opts} />
+                </>
+              )}
 
-<YouTube videoId={WorkDetails.original_video} opts={opts} />
-
-</>
-                )} 
-
-{WorkDetails.file_type == 'animation' && (
+              {WorkDetails.file_type == 'animation' && (
                 <>
-
-<YouTube videoId={WorkDetails.original_video} opts={opts} />
-
-</>
-                )} 
-
+                  <YouTube videoId={WorkDetails.original_video} opts={opts} />
+                </>
+              )}
             </div>
           </section>
-
-
 
           <section className="workshopareas profiledesc">
             <div className="container">
