@@ -203,6 +203,8 @@ const Index = () => {
     </div>
   </section>
 
+{featuredItemShoot.length && (
+
   <section className="blpt mprojs whowres whtxt">
     <div className="container align-self-center">
       <div className="mainhd text-center">
@@ -237,6 +239,8 @@ const Index = () => {
      </OwlCarousel>
     </div>
   </section>
+
+)}
   <section className="whtpt pd-thm workbrn pd-topm" id='clients'>
     <div className="container">
       <div className="mainhd text-center">
