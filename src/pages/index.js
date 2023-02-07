@@ -18,13 +18,19 @@ const OwlCarousel = dynamic(() => import('react-owl-carousel'), {
 })
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { notification } from 'antd'
 gsap.registerPlugin(ScrollTrigger);
 
 const Index = () => {
 
   const [featuredItem, setFeaturedItem] = useState([])
   const [featuredItemShoot, setFeaturedItemShoot] = useState([])
-
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [mobile, setMobile] = useState('')
+  const [looking, setLooking] = useState('')
+  const [represent, setRepresent] = useState('')
+  const [loading, setLoading] = useState(false)
   const router = useRouter()
 
   useEffect(() => {
@@ -66,6 +72,96 @@ const Index = () => {
     } catch (err) {
       console.log(err)
     }
+  }
+
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+
+    if (name == '') {
+      openNotificationWithIcon('error', 'Please enter the name!')
+      return false
+    }
+
+    
+    if (looking == '') {
+      openNotificationWithIcon('error', 'Please enter the looking for field!')
+      return false
+    }
+
+    if (represent == '') {
+      openNotificationWithIcon('error', 'Please enter the represent field!')
+      return false
+    }
+
+    if (mobile == '') {
+      openNotificationWithIcon('error', 'Please enter the mobile!')
+      return false
+    }
+
+    if (!mobile.match('[0-9]{10}')) {
+      openNotificationWithIcon('error', 'Please enter the valid mobile number!')
+      return false
+    }
+
+
+    if (email == '') {
+      openNotificationWithIcon('error', 'Please enter the email!')
+      return false
+    }
+
+    if (IsEmail(email) == false) {
+      openNotificationWithIcon('error', 'Please enter the correct email!')
+      return false
+    }
+
+    setLoading(true)
+
+    try {
+      const { data } = await axios.post(
+        `${process.env.NEXT_PUBLIC_API}/contact`,
+        {
+          name,
+          email,
+          mobile,
+          looking,
+          represent
+        },
+      )
+
+      setLoading(false)
+
+      notification['success']({
+        message: 'success!',
+        description: 'Form has been submitted successfully!',
+        duration: 4,
+        placement: 'bottomRight',
+        bottom: 65,
+      })
+
+      router.push('/thanks')
+    } catch (err) {
+      setLoading(false)
+    }
+  }
+
+  const IsEmail = (email) => {
+    let regex = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/
+    if (!regex.test(email)) {
+      return false
+    } else {
+      return true
+    }
+  }
+
+  const openNotificationWithIcon = (type, msg) => {
+    notification[type]({
+      message: 'Error!',
+      description: msg,
+      duration: 5,
+      placement: 'bottomRight',
+      bottom: 65,
+    })
   }
 
   const state = {
@@ -151,7 +247,7 @@ const Index = () => {
     {featuredItem &&
                   featuredItem.map((featuredItm, key) => (
   
-    <div className="vdo-sects" id={'hover-target'+key}>
+    <div className="vdo-sects" id={'hover-target'+key} key={key}>
       <div className="container">
         <div className="row">
           <div className="col-md-6 vdopls">
@@ -223,7 +319,7 @@ const Index = () => {
 
 {featuredItemShoot &&
                   featuredItemShoot.map((featuredItemSht, key) => (
-        <div className="item">
+        <div className="item" key={key}>
            <Link  href={`work/${featuredItemSht.slug}`}>
             <img   src={
                         `${process.env.NEXT_PUBLIC_B_API}work/images/thumbnail/` +
@@ -317,37 +413,43 @@ const Index = () => {
         <h4 className="cntheads"><span>Impressed? </span> Let’s talk!</h4>
       </div>
       <div className="mnformsty">
-        <form>
+      <form onSubmit={handleSubmit}>
+
           <div className="form-group  row">
             <div className="col-md-2">
               <label><b>Hello, my name is</b></label>
             </div>
             <div className="col-md-4">
-              <input type="text" className="form-control" />
+              <input name="name"  value={name}
+                        onChange={(e) => setName(e.target.value)} type="text" className="form-control" />
             </div>
             <div className="col-md-2">
               <label><b>I’m looking for</b></label>
             </div>
             <div className="col-md-3">
-              <input type="text" className="form-control" />
+              <input name="looking"  value={looking}
+                        onChange={(e) => setLooking(e.target.value)} type="text" className="form-control" />
             </div>
             <div className="col-md-2">
               <label><b>and I represent</b></label>
             </div>
             <div className="col-md-4">
-              <input type="text" className="form-control" />
+              <input name="represent"  value={represent}
+                        onChange={(e) => setRepresent(e.target.value)} type="text" className="form-control" />
             </div>
             <div className="col-md-2">
               <label><b>you can contact me on</b></label>
             </div>
             <div className="col-md-3">
-              <input type="text" className="form-control" />
+              <input name="mobile"  value={mobile}
+                        onChange={(e) => setMobile(e.target.value)} type="text" className="form-control" />
             </div>
             <div className="col-md-2">
               <label><b>or drop a mail at</b></label>
             </div>
             <div className="col-md-4">
-              <input type="text" className="form-control" />
+              <input name="email"  value={email}
+                        onChange={(e) => setEmail(e.target.value)} type="text" className="form-control" />
             </div>
             <div className="col-md-12 text-center">
               <button className="ytthemects">Submit</button>
