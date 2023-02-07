@@ -829,6 +829,8 @@ body {font-family: 'Proxima Nova Rg'; -webkit-font-smoothing: antialiased;
         padding-top: 50px;
     }
 
+    
+
     @font-face {
         font-family: "Proxima Nova Rg";
         src: url("./fonts/ProximaNova-Regular.woff2") format("woff2"), url("./fonts/ProximaNova-Regular.woff") format("woff");
