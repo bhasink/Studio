@@ -47,7 +47,7 @@ function Loading() {
             <div className="lgo">
               <img
                 src={
-                  `${process.env.NEXT_PUBLIC_B_API}`+img
+                  `${process.env.NEXT_PUBLIC_B_API}`+ img
                 }
                 className="navbar-brand-img blg"
                 alt="logo"
@@ -71,6 +71,14 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
+
+<Head>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0" />
+        <title>SWA Studios</title>
+        </Head>
+
+
      {!loading ? (
 <>
  <div className="spinner-wrapper">

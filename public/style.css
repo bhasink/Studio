@@ -28,6 +28,11 @@ body {font-family: 'Proxima Nova Rg'; -webkit-font-smoothing: antialiased;
         animation-iteration-count: 1;
         animation-timing-function: ease-in-out;
     }
+
+    .brl{
+        opacity: 0;
+        will-change: transform;
+    }
       
       @keyframes fadeIn {
         0% {
@@ -545,7 +550,7 @@ body {font-family: 'Proxima Nova Rg'; -webkit-font-smoothing: antialiased;
     .brandssld .col-md-2 .img-fluid {
         max-width: 70%;
     }
-    
+
     /* css for Logo Section ends here */
     
     

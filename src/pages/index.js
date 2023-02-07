@@ -16,6 +16,9 @@ import dynamic from 'next/dynamic'
 const OwlCarousel = dynamic(() => import('react-owl-carousel'), {
   ssr: false,
 })
+import { gsap } from "gsap/dist/gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 const Index = () => {
 
