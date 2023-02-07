@@ -41,7 +41,6 @@ const Index = () => {
     if (router.isReady) {
       const _id = router.query._id
       getFeaturedItem()
-    //   console.log(router.query)
     }
   }, [router.isReady])
 
