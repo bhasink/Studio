@@ -213,16 +213,20 @@ const Index = () => {
           loop="loop"
           className="videoadaptsdesktop"
         >
-          <source src="/images/mainvideo.mp4?v=2" type="video/mp4" />
+          <source
+            src={`${process.env.NEXT_PUBLIC_B_API}mvideo.mp4`}
+            type="video/mp4"
+          />
         </video>
         {/*<img src="./images/mobbanner.jpg" class="mobstopayout img-fluid">*/}
       </section>
+
       <section className="blpt whowres whtxt d-flex section1">
         <div className="container align-self-center">
           <div className="row">
             <div className="col-md-4 text-center position-relative">
               <h2 className="mnsub">
-                Who are <span className="strsp">we?</span>
+                Who are<span className="strsp">we?</span>
               </h2>
               <div className="movablelines" />
             </div>
