@@ -192,7 +192,7 @@ const WorkDetails = () => {
                     spaceBetween={10}
                     freeMode={true}
                     slidesOffsetAfter={0}
-                    navigation={true}
+                    // navigation={true}
                     modules={[Pagination, Navigation, FreeMode]}
                     className="mySwiper"
                     grabCursor={true}

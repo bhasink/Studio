@@ -16,9 +16,6 @@ import dynamic from 'next/dynamic'
 const OwlCarousel = dynamic(() => import('react-owl-carousel'), {
   ssr: false,
 })
-
-import ScrollAnimation from 'react-animate-on-scroll';
-
 // import { gsap } from 'gsap/dist/gsap'
 // import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 import { notification } from 'antd'
@@ -359,23 +356,16 @@ const Index = () => {
               <span>Brands </span> we work with
             </h4>
           </div>
-
-          
           {/*<div class="brandssld">
 			<img src="./images/brandsslate.jpg" class="img-fluid">
 		</div>*/}
           <div className="brandssld">
             <div className="row">
               <div className="col-md-2 col-4 blk">
-              <ScrollAnimation animateIn='fadeIn'
-  scrollableParentSelector='#scrolly-div-animatePreScroll'
-  animatePreScroll={true}>
-
                 <img
                   src={`${process.env.NEXT_PUBLIC_B_API}/images/swclients/1.png`}
                   className="img-fluid"
                 />
-                </ScrollAnimation>
               </div>
               <div className="col-md-2 col-4 blk">
                 <img
