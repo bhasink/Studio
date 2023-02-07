@@ -69,10 +69,9 @@ $(function() {
           height={37}
           priority
         /> */}
- <img src={
-                  `${process.env.NEXT_PUBLIC_B_API}images/logo.svg`
-                } className="navbar-brand-img" alt="logo" />
-
+  <img src={
+                  `${process.env.NEXT_PUBLIC_B_API}/images/logo.svg`
+                }  className="navbar-brand-img" alt="logo" />
          {/*<img src="/images/logoblack.svg" className="navbar-brand-img" alt="logo" /> 
       */} 
       </Link>
