@@ -1,6 +1,6 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 import Script from 'next/script'
-import { useState,useEffect } from "react"
+import { useState, useEffect } from 'react'
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
     const initialProps = await Document.getInitialProps(ctx)
@@ -11,14 +11,32 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css?ver=5.3.2" rel="stylesheet" type="text/css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
-        <link href="https://kit-pro.fontawesome.com/releases/v5.11.2/css/pro.min.css?ver=5.3.2" rel="stylesheet" type="text/css" />
-        <link rel="stylesheet" type="text/css" href="../../style.css" />
+          <link
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css?ver=5.3.2"
+            rel="stylesheet"
+            type="text/css"
+          />
+          <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+          />
+          <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+          />
+          <link
+            href="https://kit-pro.fontawesome.com/releases/v5.11.2/css/pro.min.css?ver=5.3.2"
+            rel="stylesheet"
+            type="text/css"
+          />
+          <link
+            rel="stylesheet"
+            type="text/css"
+            href={`${process.env.NEXT_PUBLIC_B_API}style.css`}
+          />
         </Head>
 
-        <body className='sa'>
+        <body className="sa">
           <Main />
           <NextScript />
 
@@ -37,7 +55,6 @@ class MyDocument extends Document {
             integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
             crossOrigin="anonymous"
           ></script>
-
         </body>
       </Html>
     )

@@ -831,28 +831,28 @@ body {font-family: 'Proxima Nova Rg'; -webkit-font-smoothing: antialiased;
 
     @font-face {
         font-family: "Proxima Nova Rg";
-        src: url("./fonts/ProximaNova-Regular.woff2") format("woff2"), url("./fonts/ProximaNova-Regular.woff") format("woff");
+        src: url("https://api.swstudios.in/fonts/ProximaNova-Regular.woff2") format("woff2"), url("https://api.swstudios.in/fonts/ProximaNova-Regular.woff") format("woff");
         font-weight: normal;
         font-style: normal;
         font-display: swap;
       }
       @font-face {
         font-family: "Proxima Nova";
-        src: url("./fonts/ProximaNova-Extrabld.woff2") format("woff2"), url("./fonts/ProximaNova-Extrabld.woff") format("woff");
+        src: url("https://api.swstudios.in/fonts/ProximaNova-Extrabld.woff2") format("woff2"), url("https://api.swstudios.in/fonts/ProximaNova-Extrabld.woff") format("woff");
         font-weight: bold;
         font-style: normal;
         font-display: swap;
       }
       @font-face {
         font-family: "Proxima Nova Rg";
-        src: url("./fonts/ProximaNova-Bold.woff2") format("woff2"), url("./fonts/ProximaNova-Bold.woff") format("woff");
+        src: url("https://api.swstudios.in/fonts/ProximaNova-Bold.woff2") format("woff2"), url("https://api.swstudios.in/fonts/ProximaNova-Bold.woff") format("woff");
         font-weight: bold;
         font-style: normal;
         font-display: swap;
       }
       @font-face {
         font-family: "Aurelie Smith DEMO";
-        src: url("./fonts/AurelieSmithDEMO.woff2") format("woff2"), url("./fonts/AurelieSmithDEMO.woff") format("woff");
+        src: url("https://api.swstudios.in/fonts/AurelieSmithDEMO.woff2") format("woff2"), url("https://api.swstudios.in/fonts/AurelieSmithDEMO.woff") format("woff");
         font-weight: normal;
         font-style: normal;
         font-display: swap;
