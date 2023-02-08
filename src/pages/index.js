@@ -212,6 +212,7 @@ const Index = () => {
           muted="muted"
           loop="loop"
           className="videoadaptsdesktop"
+          poster="https://api.swstudios.in/work/images/thumbnail/realme-escape-the-infinite.jpg"
         >
           <source
             src={`${process.env.NEXT_PUBLIC_B_API}mvideo.mp4`}
