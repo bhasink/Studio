@@ -829,7 +829,13 @@ body {font-family: 'Proxima Nova Rg'; -webkit-font-smoothing: antialiased;
         padding-top: 50px;
     }
 
-    
+    .gallerybooths .owl-stage {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-box;
+        display: box;
+}
+
 
     @font-face {
         font-family: "Proxima Nova Rg";
