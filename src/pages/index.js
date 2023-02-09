@@ -1,8 +1,7 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import Link from 'next/link'
 import Header from '../../components/header/header'
 import Footer from '../../components/footer/footer'
-import Image from 'next/image'
 import HoverVideoPlayer from 'react-hover-video-player'
 import { useRouter } from 'next/router'
 import axios from 'axios'
@@ -16,10 +15,10 @@ import dynamic from 'next/dynamic'
 const OwlCarousel = dynamic(() => import('react-owl-carousel'), {
   ssr: false,
 })
-// import { gsap } from 'gsap/dist/gsap'
-// import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
+import { gsap } from 'gsap/dist/gsap'
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 import { notification } from 'antd'
-// gsap.registerPlugin(ScrollTrigger)
+gsap.registerPlugin(ScrollTrigger)
 
 const Index = () => {
   const [featuredItem, setFeaturedItem] = useState([])
@@ -31,6 +30,8 @@ const Index = () => {
   const [represent, setRepresent] = useState('')
   const [loading, setLoading] = useState(false)
   const router = useRouter()
+  const root = useRef();
+
 
   useEffect(() => {
     const [red, green, blue] = [253, 106, 2]
@@ -361,7 +362,7 @@ const Index = () => {
 			<img src="./images/brandsslate.jpg" class="img-fluid">
 		</div>*/}
           <div className="brandssld">
-            <div className="row">
+            <div className="row" ref={root}>
               <div className="col-md-2 col-4 blk">
                 <img
                   src={`${process.env.NEXT_PUBLIC_B_API}/images/swclients/1.png`}
