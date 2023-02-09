@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from 'react'
+import { useLayoutEffect, useEffect, useState, useRef } from 'react'
 import Link from 'next/link'
 import Header from '../../components/header/header'
 import Footer from '../../components/footer/footer'
@@ -15,7 +15,7 @@ import dynamic from 'next/dynamic'
 const OwlCarousel = dynamic(() => import('react-owl-carousel'), {
   ssr: false,
 })
-import { gsap } from 'gsap/dist/gsap'
+import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 import { notification } from 'antd'
 gsap.registerPlugin(ScrollTrigger)
@@ -50,6 +50,27 @@ const Index = () => {
       getFeaturedItem()
     }
   }, [router.isReady])
+
+  useLayoutEffect(() => {
+
+
+    gsap.to(root, {
+      x: 100,
+      duration: 2,
+      ease: "bounce",
+      delay: 1,
+      scrollTrigger: {
+        trigger: ".brandssld",
+        markers: true
+      }
+    });
+
+    // let ctx = gsap.context(() => {
+    //   gsap.to(".blk", { rotation: "+=360" });
+    // }, root);
+
+    // return () => ctx.revert();
+  }, []);
 
   const getFeaturedItem = async () => {
     try {

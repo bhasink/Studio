@@ -78,8 +78,8 @@ const WorkDetails = () => {
   }
 
   const opts = {
-    height: '450',
-    width: '50%',
+    height: '500',
+    width: '80%',
     playerVars: {
       autoplay: 0,
       modestbranding: 1,
@@ -167,6 +167,7 @@ const WorkDetails = () => {
                 </span>{' '}
               </h4>
             </div>
+
             <div className="videomanys">
               {galleryImages.length > 0 && (
                 <>
