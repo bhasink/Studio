@@ -749,7 +749,6 @@ body {font-family: 'Proxima Nova Rg'; -webkit-font-smoothing: antialiased;
     
     .videomanys {
         overflow: hidden;
-        background: #f1f1f1;
         padding: 25px 0;
         text-align: center;
     }
@@ -831,7 +830,17 @@ body {font-family: 'Proxima Nova Rg'; -webkit-font-smoothing: antialiased;
     
     .gallerybooths {
         padding-top: 50px;
-        background: #fff;
+        background: #000;
+    }
+
+    .gallerybooths .mainhd .cntheads {
+        color: #fff;
+    }
+
+  
+    
+    .gallerybooths .mainhd {
+        margin-bottom: 25px;
     }
 
     .gallerybooths .owl-stage {
@@ -840,21 +849,6 @@ body {font-family: 'Proxima Nova Rg'; -webkit-font-smoothing: antialiased;
         display: -ms-box;
         display: -webkit-box;
     width: 100% !important;
-}
-
-.lg-thumb-item {
-    width: 40px !important;
-    height: 40px !important;
-}
-
-.lg-thumb.lg-group {
-    text-align: center;
-    margin: auto;
-}
-
- .lg-outer .lg-thumb-item {
-    display: inline-block;
-    float: none !important;
 }
 
 
@@ -945,7 +939,7 @@ body {font-family: 'Proxima Nova Rg'; -webkit-font-smoothing: antialiased;
       .mainhd .cntheads {
         font-family: "Proxima Nova Rg";
         font-weight: 600;
-        font-size: 42px;
+        font-size: 38px;
       }
       
       .mainhd .cntheads span {
