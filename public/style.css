@@ -564,6 +564,7 @@ body {font-family: 'Proxima Nova Rg'; -webkit-font-smoothing: antialiased;
         padding: 50px 0 0;
         position: sticky;
         bottom: -15px;
+        z-index: -2;
     }
     
     .copyrgts p {
@@ -662,6 +663,7 @@ body {font-family: 'Proxima Nova Rg'; -webkit-font-smoothing: antialiased;
         border-bottom: 2px solid transparent;
         font-size: 15px;
         outline: none;
+        color: #000000;
     }
     
     .tabnormcta button.active {
@@ -761,7 +763,7 @@ body {font-family: 'Proxima Nova Rg'; -webkit-font-smoothing: antialiased;
     }
 
     .videomanys iframe {
-    width: 80%;
+    width: 90%;
     margin: auto 0;
     height: 500px;
     box-shadow: #0000004a 0px 0px 20px 0px;
