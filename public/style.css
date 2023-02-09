@@ -447,6 +447,11 @@ body {font-family: 'Proxima Nova Rg'; -webkit-font-smoothing: antialiased;
         position: relative;
         top: -305px;
     }
+
+    .mprojs .owl-nav button {
+        width: 35px;
+        height: 35px;
+    }
     
     .mprojs .owl-nav button.owl-prev {
         float: left;
