@@ -51,26 +51,20 @@ const Index = () => {
     }
   }, [router.isReady])
 
-  useLayoutEffect(() => {
+  // useLayoutEffect(() => {
 
+  //   gsap.to(root, {
+  //     x: 100,
+  //     duration: 2,
+  //     ease: "bounce",
+  //     delay: 1,
+  //     scrollTrigger: {
+  //       trigger: ".brandssld",
+  //       markers: true
+  //     }
+  //   });
 
-    gsap.to(root, {
-      x: 100,
-      duration: 2,
-      ease: "bounce",
-      delay: 1,
-      scrollTrigger: {
-        trigger: ".brandssld",
-        markers: true
-      }
-    });
-
-    // let ctx = gsap.context(() => {
-    //   gsap.to(".blk", { rotation: "+=360" });
-    // }, root);
-
-    // return () => ctx.revert();
-  }, []);
+  // }, []);
 
   const getFeaturedItem = async () => {
     try {
