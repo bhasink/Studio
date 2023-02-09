@@ -171,7 +171,7 @@ const WorkDetails = () => {
             <div className="videomanys">
               {galleryImages.length > 0 && (
                 <>
-                  <LightGallery speed={500} plugins={[lgThumbnail]}>
+                  <LightGallery speed={500} plugins={[lgThumbnail]} mobileSettings={{showCloseIcon: true}}>
                     {galleryImages &&
                       galleryImages.map((gImage, key) => (
                         <div
