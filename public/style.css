@@ -761,7 +761,7 @@ body {font-family: 'Proxima Nova Rg'; -webkit-font-smoothing: antialiased;
     }
 
     .videomanys iframe {
-    width: 53%;
+    width: 80%;
     margin: auto 0;
     height: 381px;
     box-shadow: #0000004a 0px 0px 20px 0px;
