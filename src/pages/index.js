@@ -202,7 +202,7 @@ const Index = () => {
     <>
       <Header />
 
-      <section className="blpt homebannnerk revealer">
+      <section className="blpt homebannnerk revealer vbgcl">
         {/*<img src="./images/bannerhome.jpg" class="desktopayout img-fluid"> */}
         <video
           id="vid"
