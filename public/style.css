@@ -238,6 +238,10 @@ body {font-family: 'Proxima Nova Rg'; -webkit-font-smoothing: antialiased;
         overflow: hidden;
         position: relative;
     }
+
+    .blpt.homebannnerk {
+        background: #000;
+    }
     
     
     /* css for First Banner Ends Here */
