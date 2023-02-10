@@ -201,7 +201,7 @@ const Index = () => {
   return (
     <>
       <Header />
-
+    <div className='mainhome'>
       <section className="blpt homebannnerk revealer">
         {/*<img src="./images/bannerhome.jpg" class="desktopayout img-fluid"> */}
         <video
@@ -563,7 +563,7 @@ const Index = () => {
           </div>
         </div>
       </section>
-
+      </div>
       <Footer />
     </>
   )
