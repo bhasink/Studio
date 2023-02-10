@@ -1209,8 +1209,8 @@ body {font-family: 'Proxima Nova Rg'; -webkit-font-smoothing: antialiased;
 
     .tabnormcta {
         display: flex;
-        width: 100%;
-        max-width: 100%;
+        width: 93%;
+        max-width: 93%;
         margin: auto;
     }
     
@@ -1269,3 +1269,14 @@ body {font-family: 'Proxima Nova Rg'; -webkit-font-smoothing: antialiased;
     .videomanys .owl-carousel.videopgsl {
         height: 282px;
     }
+
+    @media not all and (min-resolution:.001dpcm)
+{ @supports (-webkit-appearance:none) {
+
+    .thmn-footer{ 
+
+        position: relative;
+        bottom: 0;
+
+    }
+}}
