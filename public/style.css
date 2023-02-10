@@ -1056,7 +1056,9 @@ body {font-family: 'Proxima Nova Rg'; -webkit-font-smoothing: antialiased;
       /* responsive */
     
     @media screen and (max-width: 767px) and (min-width: 320px){
-
+        .homebannnerk.revealer{
+            height: 82.9vh;
+        }
         .latestwrk .vdo-sects:hover p, .latestwrk .vdo-sects:hover a {
             color: #000000;
         }
@@ -1209,13 +1211,15 @@ body {font-family: 'Proxima Nova Rg'; -webkit-font-smoothing: antialiased;
 
     .tabnormcta {
         display: flex;
-        width: 93%;
-        max-width: 93%;
+        width: 90%;
+        max-width: 90%;
         margin: auto;
+
     }
     
     .tabnormcta button {
         margin: auto;
+        font-size: 13px;
     }
 
     .container{
