@@ -234,7 +234,7 @@ body {font-family: 'Proxima Nova Rg'; -webkit-font-smoothing: antialiased;
     }
     
     .homebannnerk.revealer {
-        height: 542px;
+        height: 98vh;
         overflow: hidden;
         position: relative;
     }
@@ -1056,10 +1056,6 @@ body {font-family: 'Proxima Nova Rg'; -webkit-font-smoothing: antialiased;
       /* responsive */
     
     @media screen and (max-width: 767px) and (min-width: 320px){
-
-        .homebannnerk.revealer{
-            height: 700px;
-        }
 
         .latestwrk .vdo-sects:hover p, .latestwrk .vdo-sects:hover a {
             color: #000000;
