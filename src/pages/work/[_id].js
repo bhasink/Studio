@@ -218,13 +218,17 @@ const WorkDetails = () => {
 
               {WorkDetails.file_type == 'production' && (
                 <>
+                  <div className='setvdframes'>
                   <YouTube videoId={WorkDetails.original_video} opts={opts} />
+                  </div>
                 </>
               )}
 
               {WorkDetails.file_type == 'animation' && (
                 <>
+                <div className='setvdframes'>
                   <YouTube videoId={WorkDetails.original_video} opts={opts} />
+                  </div>
                 </>
               )}
             </div>
