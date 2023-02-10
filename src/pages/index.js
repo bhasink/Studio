@@ -229,14 +229,14 @@ const Index = () => {
         >
           {isMobile && (
             <source
-              src={`${process.env.NEXT_PUBLIC_B_API}mvideo.mp4?v=4`}
+              src={`${process.env.NEXT_PUBLIC_B_API}brandmobile.mp4?v=1`}
               type="video/mp4"
             />
           )}
 
           {!isMobile && (
             <source
-              src={`${process.env.NEXT_PUBLIC_B_API}mvideo.mp4?v=5`}
+              src={`${process.env.NEXT_PUBLIC_B_API}mvideo.mp4?v=4`}
               type="video/mp4"
             />
           )}
