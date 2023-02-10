@@ -445,22 +445,17 @@ body {font-family: 'Proxima Nova Rg'; -webkit-font-smoothing: antialiased;
         height: 3px;
         border-bottom: 1px solid #fd6a02;
         margin: 20px 0;
-    }
+    } 
     
     .mprojs .owl-nav {
         position: relative;
         top: -305px;
     }
 
-    .mprojs .owl-nav button {
-        width: 35px;
-        height: 35px;
-    }
-    
+   
     .mprojs .owl-nav button.owl-prev {
         float: left;
         left: -18px;
-        overflow: inherit;
     }
     
     .mprojs .owl-nav button span {
@@ -474,9 +469,9 @@ body {font-family: 'Proxima Nova Rg'; -webkit-font-smoothing: antialiased;
         border: 1px solid #fff;
     }
     
-    .mprojs .owl-nav button {
-        width: 27px;
-        height: 27px;
+    .mprojs .owl-carousel .owl-nav button {
+        width: 35px;
+        height: 35px;
         overflow: hidden;
     }
     
@@ -484,10 +479,10 @@ body {font-family: 'Proxima Nova Rg'; -webkit-font-smoothing: antialiased;
         background: transparent;
     }
     
+    
     .mprojs .owl-nav button.owl-next {
         float: right;
         right: -18px;
-        overflow: inherit;
     }
     
     .mprojs .owl-nav button {
