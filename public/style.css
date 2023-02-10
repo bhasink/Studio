@@ -571,9 +571,9 @@ body {font-family: 'Proxima Nova Rg'; -webkit-font-smoothing: antialiased;
     
     .thmn-footer {
         padding: 50px 0 0;
-        position: sticky;
-        bottom: -15px;
-        z-index: 3;
+        position: relative;
+        bottom: 0px;
+        z-index: -2;
         background:#fff;
     }
     
@@ -1134,7 +1134,7 @@ body {font-family: 'Proxima Nova Rg'; -webkit-font-smoothing: antialiased;
         float: right;
         position: absolute;
         right: 19px;
-        top: 13px;
+        top: 7px;
         color: #fff;
         border-color: rgb(255 255 255 / 0%);
         outline:none;
@@ -1190,8 +1190,31 @@ body {font-family: 'Proxima Nova Rg'; -webkit-font-smoothing: antialiased;
     }
 
     .videomanys iframe {
-        width: 85%;
-        height: 199px;
+        width: 100%;
+        height: 200px;
+    }
+
+    .gallerybooths .swiper-horizontal {
+        padding-bottom: 25px;
+    }
+    
+    .videomanys{
+        padding: 0 0;
+    }
+
+    .setvdframes {
+        height: 200px;
+    }
+
+    .tabnormcta {
+        display: flex;
+        width: 100%;
+        max-width: 100%;
+        margin: auto;
+    }
+    
+    .tabnormcta button {
+        margin: auto;
     }
 
     .container{

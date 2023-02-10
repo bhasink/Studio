@@ -1,8 +1,34 @@
 import Link from 'next/link'
+import { useState,useEffect } from "react"
 
 const Footer = () => {
+
+  useEffect(() => {
+    var revealerpoint = 0;
+    window.addEventListener('scroll', reveal);
+    reveal();
+    
+    function reveal() {
+      
+        var revealers = document.querySelectorAll('.revealer');
+        for (var i = 0; i < revealers.length; i++) {
+            var windowheight = window.innerHeight;
+            var revealertop = revealers[i].getBoundingClientRect().top;
+            var revealerbottom = revealers[i].getBoundingClientRect().bottom;
+            if (revealertop < windowheight - revealerpoint) {
+                revealers[i].classList.add('active')
+            } else {
+                revealers[i].classList.remove('active');
+            };
+            if (revealerbottom < 0 + revealerpoint) {
+                revealers[i].classList.remove('active');
+            }
+        } 
+    };
+  }, [])
+
     return (
-<footer className="thmn-footer">
+<footer className="thmn-footer revealer">
   <div className="desktop-footer">
     <div className="container">
       <div className="row">

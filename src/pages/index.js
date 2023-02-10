@@ -215,9 +215,10 @@ const Index = () => {
           // poster="https://api.swstudios.in/work/images/thumbnail/realme-escape-the-infinite.jpg"
         >
           <source
-            src={`${process.env.NEXT_PUBLIC_B_API}mvideo.mp4?v=2`}
+            src={`${process.env.NEXT_PUBLIC_B_API}mvideo.mp4?v=4`}
             type="video/mp4"
           />
+          
         </video>
         {/*<img src="./images/mobbanner.jpg" class="mobstopayout img-fluid">*/}
       </section>
