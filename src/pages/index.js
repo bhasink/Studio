@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import Link from 'next/link'
 import Header from '../../components/header/header'
 import Footer from '../../components/footer/footer'
@@ -30,6 +30,7 @@ const Index = () => {
   const [looking, setLooking] = useState('')
   const [represent, setRepresent] = useState('')
   const [loading, setLoading] = useState(false)
+  const [width, setWidth] = useState(window.innerWidth);
   const router = useRouter()
 
   useEffect(() => {
@@ -69,6 +70,18 @@ const Index = () => {
       console.log(err)
     }
   }
+
+  function handleWindowSizeChange() {
+    setWidth(window.innerWidth)
+  }
+  useEffect(() => {
+    window.addEventListener('resize', handleWindowSizeChange)
+    return () => {
+      window.removeEventListener('resize', handleWindowSizeChange)
+    }
+  }, [])
+
+  const isMobile = width <= 768
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -214,11 +227,19 @@ const Index = () => {
           className="videoadaptsdesktop"
           // poster="https://api.swstudios.in/work/images/thumbnail/realme-escape-the-infinite.jpg"
         >
-          <source
-            src={`${process.env.NEXT_PUBLIC_B_API}mvideo.mp4?v=4`}
-            type="video/mp4"
-          />
-          
+          {isMobile && (
+            <source
+              src={`${process.env.NEXT_PUBLIC_B_API}mvideo.mp4?v=4`}
+              type="video/mp4"
+            />
+          )}
+
+          {!isMobile && (
+            <source
+              src={`${process.env.NEXT_PUBLIC_B_API}mvideo.mp4?v=5`}
+              type="video/mp4"
+            />
+          )}
         </video>
         {/*<img src="./images/mobbanner.jpg" class="mobstopayout img-fluid">*/}
       </section>
