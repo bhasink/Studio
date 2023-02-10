@@ -30,7 +30,7 @@ const Index = () => {
   const [looking, setLooking] = useState('')
   const [represent, setRepresent] = useState('')
   const [loading, setLoading] = useState(false)
-  const [width, setWidth] = useState < number > window.innerWidth
+  const [width, setWidth] = useState(window.innerWidth);
   const router = useRouter()
 
   useEffect(() => {
