@@ -17,7 +17,7 @@ import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 
-import { FreeMode, Navigation, Pagination } from 'swiper'
+import {Autoplay, FreeMode, Navigation, Pagination } from 'swiper'
 
 import LightGallery from 'lightgallery/react'
 
@@ -196,8 +196,14 @@ const WorkDetails = () => {
                     controls={true}
                     showCloseIcon = {true}
                     slidesOffsetAfter={0}
+                    autoplay={{
+                      delay: 2500,
+                      disableOnInteraction: false,
+                    }}
+
+                   
                    // navigation={true}
-                    modules={[Pagination, Navigation, FreeMode]}
+                    modules={[Autoplay, Pagination, Navigation, FreeMode]}
                     className="mySwiper"
                     grabCursor={true}
                   >
