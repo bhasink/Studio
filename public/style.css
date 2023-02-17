@@ -49,7 +49,7 @@ body {font-family: 'Proxima Nova Rg'; -webkit-font-smoothing: antialiased;
     
     .site-header.topmain {
         background: transparent;
-        padding: 6px 0;
+        padding: 10px 0;
         position: fixed;
         top: 0;
         left: 0;
@@ -59,7 +59,7 @@ body {font-family: 'Proxima Nova Rg'; -webkit-font-smoothing: antialiased;
     }
     
     .site-header.topmain.mobexheight.navfixed {
-           padding: 6px 0;
+           padding: 10px 0;
         background: #000;
     }
     
@@ -234,7 +234,7 @@ body {font-family: 'Proxima Nova Rg'; -webkit-font-smoothing: antialiased;
     }
     
     .homebannnerk.revealer {
-        height: 95vh;
+        height: 100vh;
         overflow: hidden;
         position: relative;
     }
@@ -381,7 +381,7 @@ body {font-family: 'Proxima Nova Rg'; -webkit-font-smoothing: antialiased;
     }
     
     .morevdo .mnsub {
-        font-size: 21px;
+        font-size: 24px;
         color: #000;
     }
     
@@ -838,14 +838,10 @@ body {font-family: 'Proxima Nova Rg'; -webkit-font-smoothing: antialiased;
     
     .gallerybooths {
         padding-top: 50px;
-        background: #000;
+        background: #fff;
     }
 
-    .gallerybooths .mainhd .cntheads {
-        color: #fff;
-    }
-
-  
+    
     
     .gallerybooths .mainhd {
         margin-bottom: 25px;
@@ -906,7 +902,7 @@ body {font-family: 'Proxima Nova Rg'; -webkit-font-smoothing: antialiased;
       }
 
       .whowres{
-        background: rgb(253, 106, 2);
+        background: rgb(0, 0, 0)  !important;
       }
       
       .mnformsty .form-control, .mnformsty label {

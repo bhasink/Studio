@@ -200,7 +200,7 @@ const Work = () => {
 <div key={key} className='col-md-4 aa fadeq' id={'hover-target-app'+key}>
                     <div className='laysets'>
                       <div className='photolyers vdopls'>
-
+                      <Link href={`work/${production.slug}`}>
 
             {production.file_type == 'photoshoot' && (           
                  
@@ -247,7 +247,7 @@ const Work = () => {
 
 ): ""}
 
-
+</Link>
 
                     </div>
                     <h5>{production.name}</h5>

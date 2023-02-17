@@ -153,7 +153,8 @@ const WorkDetails = () => {
       </Head>
 
       {WorkDetails && WorkDetails != null && (
-        <>
+        
+<div className='mainhome'>
           <section className="mt-5 pd-5 gallerybooths">
             <div className="mainhd text-center">
               <h4 className="cntheads">
@@ -243,7 +244,8 @@ const WorkDetails = () => {
               </div>
             </div>
           </section>
-        </>
+          </div>
+        
       )}
 
       <Footer />

@@ -383,10 +383,16 @@ const Index = () => {
 			<img src="./images/brandsslate.jpg" class="img-fluid">
 		</div>*/}
           <div className="brandssld">
-            <div className="row">
+            <div className="row justify-content-center">
               <div className="col-md-2 col-4 blk">
                 <img
-                  src={`${process.env.NEXT_PUBLIC_B_API}/images/swclients/1.png`}
+                  src={`${process.env.NEXT_PUBLIC_B_API}/images/swclients/9.png`}
+                  className="img-fluid"
+                />
+              </div>
+              <div className="col-md-2 col-4 blk">
+                <img
+                  src={`${process.env.NEXT_PUBLIC_B_API}/images/swclients/7.png`}
                   className="img-fluid"
                 />
               </div>
@@ -399,6 +405,25 @@ const Index = () => {
               <div className="col-md-2 col-4 blk">
                 <img
                   src={`${process.env.NEXT_PUBLIC_B_API}/images/swclients/3.png`}
+                  className="img-fluid"
+                />
+              </div>
+              <div className="col-md-2 col-4 blk">
+                <img
+                  src={`${process.env.NEXT_PUBLIC_B_API}/images/swclients/16.png`}
+                  className="img-fluid"
+                />
+              </div>
+
+              <div className="col-md-2 col-4 blk">
+                <img
+                  src={`${process.env.NEXT_PUBLIC_B_API}/images/swclients/8.png`}
+                  className="img-fluid"
+                />
+              </div>
+              <div className="col-md-2 col-4 blk">
+                <img
+                  src={`${process.env.NEXT_PUBLIC_B_API}/images/swclients/1.png`}
                   className="img-fluid"
                 />
               </div>
@@ -428,24 +453,6 @@ const Index = () => {
               </div>
               <div className="col-md-2 col-4 blk">
                 <img
-                  src={`${process.env.NEXT_PUBLIC_B_API}/images/swclients/7.png`}
-                  className="img-fluid"
-                />
-              </div>
-              <div className="col-md-2 col-4 blk">
-                <img
-                  src={`${process.env.NEXT_PUBLIC_B_API}/images/swclients/8.png`}
-                  className="img-fluid"
-                />
-              </div>
-              <div className="col-md-2 col-4 blk">
-                <img
-                  src={`${process.env.NEXT_PUBLIC_B_API}/images/swclients/9.png`}
-                  className="img-fluid"
-                />
-              </div>
-              <div className="col-md-2 col-4 blk">
-                <img
                   src={`${process.env.NEXT_PUBLIC_B_API}/images/swclients/10.png`}
                   className="img-fluid"
                 />
@@ -470,13 +477,30 @@ const Index = () => {
               </div>
               <div className="col-md-2 col-4 blk">
                 <img
-                  src={`${process.env.NEXT_PUBLIC_B_API}/images/swclients/17.png`}
+                  src={`${process.env.NEXT_PUBLIC_B_API}/images/swclients/14.png`}
                   className="img-fluid"
                 />
               </div>
+
+              
+
               <div className="col-md-2 col-4 blk">
                 <img
-                  src={`${process.env.NEXT_PUBLIC_B_API}/images/swclients/14.png`}
+                  src={`${process.env.NEXT_PUBLIC_B_API}/images/swclients/21.png`}
+                  className="img-fluid"
+                />
+              </div>
+
+              <div className="col-md-2 col-4 blk">
+                <img
+                  src={`${process.env.NEXT_PUBLIC_B_API}/images/swclients/20.png`}
+                  className="img-fluid"
+                />
+              </div>
+
+              <div className="col-md-2 col-4 blk">
+                <img
+                  src={`${process.env.NEXT_PUBLIC_B_API}/images/swclients/17.png`}
                   className="img-fluid"
                 />
               </div>
@@ -486,12 +510,9 @@ const Index = () => {
                   className="img-fluid"
                 />
               </div>
-              <div className="col-md-2 col-4 blk">
-                <img
-                  src={`${process.env.NEXT_PUBLIC_B_API}/images/swclients/16.png`}
-                  className="img-fluid"
-                />
-              </div>
+              
+
+             
             </div>
           </div>
         </div>
