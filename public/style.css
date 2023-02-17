@@ -757,7 +757,7 @@ body {font-family: 'Proxima Nova Rg'; -webkit-font-smoothing: antialiased;
     
     .videomanys {
         overflow: hidden;
-        padding: 25px 0;
+        padding: 15px 0;
         text-align: center;
     }
     
@@ -769,9 +769,10 @@ body {font-family: 'Proxima Nova Rg'; -webkit-font-smoothing: antialiased;
     }
 
     .videomanys iframe {
-    width: 90%;
+    width: 711px;
+    width: 908px;
     margin: auto 0;
-    height: 500px;
+    height: 400px;
     box-shadow: #0000004a 0px 0px 20px 0px;
 
     }
@@ -841,7 +842,15 @@ body {font-family: 'Proxima Nova Rg'; -webkit-font-smoothing: antialiased;
         background: #fff;
     }
 
+    .gallerybooths .mainhd .cntheads {
+        font-size: 30px;
+    }
     
+    
+    .gallerybooths .mainhd .cntheads span {
+        font-size: 86px;
+        line-height: 61px;
+    }
     
     .gallerybooths .mainhd {
         margin-bottom: 25px;
@@ -1161,11 +1170,13 @@ body {font-family: 'Proxima Nova Rg'; -webkit-font-smoothing: antialiased;
         display: block;
     }
     
-    .mainhd .cntheads {
+    .mainhd .cntheads,
+    .gallerybooths .mainhd .cntheads {
         font-size: 23px;
     }
     
-    .mainhd .cntheads span {
+    .mainhd .cntheads span,
+    .gallerybooths .mainhd .cntheads span {
         font-size: 63px;
     }
     
