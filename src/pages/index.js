@@ -265,7 +265,7 @@ const Index = () => {
                 We're <span>young, full of energy,</span> and{' '}
                 <span>passionate</span>
                 <br />
-                about what we do
+                about what we do.
               </p>
             </div>
           </div>
@@ -330,7 +330,7 @@ const Index = () => {
         <div className="morevdo">
           <div className="container">
             <Link href="/work" className="mnsub">
-              View more <span className="strsp"> work </span>{' '}
+              View more <span  className="strsp"><img src="./images/strokewe.png"/> work </span>{' '}
               <img src="./images/mrarr.png" />
             </Link>
           </div>
@@ -364,7 +364,7 @@ const Index = () => {
                       />
                       <div className="bdorg" />
                       <h6>{featuredItemSht.name}</h6>
-                      <p>{featuredItemSht.short_desc.substring(0, 50)} ...</p>
+                      <p>{featuredItemSht.short_desc.substring(0, 200)}</p>
                     </Link>
                   </div>
                 ))}
@@ -557,7 +557,7 @@ const Index = () => {
                 </div>
                 <div className="col-md-2">
                   <label>
-                    <b>and I represent</b>
+                    <b>I represent/work at </b>
                   </label>
                 </div>
                 <div className="col-md-4">
@@ -571,7 +571,7 @@ const Index = () => {
                 </div>
                 <div className="col-md-2">
                   <label>
-                    <b>you can contact me on</b>
+                    <b>Contact me on</b>
                   </label>
                 </div>
                 <div className="col-md-3">
@@ -585,7 +585,7 @@ const Index = () => {
                 </div>
                 <div className="col-md-2">
                   <label>
-                    <b>or drop a mail at</b>
+                    <b>Drop a mail at</b>
                   </label>
                 </div>
                 <div className="col-md-4">

@@ -227,7 +227,7 @@ const Thanks = () => {
           </h2>
           
           <h5>
-          Form has been submitted successfully!
+          Form has been submitted successfully.
           </h5>
         
         </div>

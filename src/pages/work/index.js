@@ -239,7 +239,7 @@ const Work = () => {
                       />
                     }
                     loadingOverlay={
-                      <div className="loading-overlay">Loading...</div>
+                      <div className="loading-overlay">Loading</div>
                     }
                     restartOnPaused
                     preload="metadata"
@@ -267,11 +267,11 @@ const Work = () => {
           {total > 6 && (
             <div className="text-center pt-4">
               {filterCoursesLastPage ? (
-                <p> Yay! you have seen all</p>
+                <p> {/*Yay! you have seen all */}</p>
               ) : (
                 <>
                   {loader ? (
-                    <p> Loading ... .. .</p>
+                    <p> Loading...</p>
                   ) : (
                     <a onClick={filtersLoadMoreData} className="orangectathms">
                       View more

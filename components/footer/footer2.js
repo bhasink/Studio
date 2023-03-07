@@ -21,13 +21,11 @@ const Footer2 = () => {
                 <li><a href="#">Production</a></li>
                 <li><a href="#">Photoshoot</a></li>
                 <li><a href="#">Animation</a></li>
-                <li><a href="#">Short videos</a></li>
               </ul>
             </div>
             <div className="col-md-4 col-12">
               <h3>Quick Links</h3>
               <ul>
-                <li><Link href="/work">Work</Link></li>
                 <li><Link href="/#clients">Clients</Link></li>
                 <li><Link href="/#getintouch">Get in Touch</Link></li>
                 

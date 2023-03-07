@@ -276,19 +276,7 @@ body {font-family: 'Proxima Nova Rg'; -webkit-font-smoothing: antialiased;
             padding-bottom: 25px;
        
     }
-    
-    .strsp {
-        background: url('./images/strokewe.png');
-        background-size: cover;
-        width: 105px;
-        height: 51px;
-        display: inline-block;
-        background-repeat: no-repeat;
-        background-position: left;
-        position: relative;
-        left: -7px;
-    }
-    
+     
     .arrmovsw {
         position: absolute;
         top: -7px;
@@ -386,13 +374,17 @@ body {font-family: 'Proxima Nova Rg'; -webkit-font-smoothing: antialiased;
     }
     
     .morevdo .mnsub .strsp {
-        left: 0;
-        width: 55px;
-        height: 25px;
-        background-size: 100%;
-        padding: 0 6px;
-        background-position: top;
-        margin: 3px -4px;
+        position: relative;
+        margin-right: 8px;
+    }
+
+    .morevdo .mnsub .strsp img {
+        width: 71px;
+        position: absolute;
+        top: 1px;
+        margin: 0 4px;
+        left: -10px;
+        z-index: -2;
     }
     
     .morevdo .mnsub img {
