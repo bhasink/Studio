@@ -267,11 +267,11 @@ const Work = () => {
                             `${process.env.NEXT_PUBLIC_B_API}work/images/thumbnail/` +
                             production.thumbnail
                           }          
-                          className="img-fluid"
+                          // className="img-fluid"
                           style={{
-                          width: '100%',
-                          height: '100%',
-                          objectFit: 'cover',
+                          // width: '100%',
+                          // height: '100%',
+                          // objectFit: 'cover',
                         }}
                       />
                     }
@@ -279,7 +279,7 @@ const Work = () => {
                       <div className="loading-overlay">Loading</div>
                     }
                     restartOnPaused
-                    preload="metadata"
+                    preload="none"
                   />
 
 ): ""}
