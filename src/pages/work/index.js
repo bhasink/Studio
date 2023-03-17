@@ -21,10 +21,42 @@ const Work = () => {
   useEffect(() => {
     if (router.isReady) {
       const _id = router.query._id
-      listing()
+      const data = localStorage.getItem('mode');
+
+      if(data == '' || data == undefined){
+        listing()
+      }else{
+        filtersLoadMore(data)
+      }
       //   console.log(router.query)
     }
   }, [router.isReady])
+
+
+//   useEffect(() => {
+//     router.beforePopState(({ as }) => {
+//       const data = localStorage.getItem();
+//       console.log('dfdf')
+//       console.log(data)
+
+//       filtersLoadMore(data)
+//         return true;
+//     });
+
+//     return () => {
+//         router.beforePopState(() => true);
+//     };
+// }, [router]); 
+
+// useEffect(() => {
+//   window.onpopstate = () => {
+//     const data = localStorage.getItem('mode');
+//       console.log('dfdf')
+//       console.log(data)
+
+//       filtersLoadMore(data)
+//   }  
+// })
 
   
 
@@ -46,24 +78,29 @@ const Work = () => {
   const filtersLoadMore = async (data) => {
     let type
     setFilterCoursesLastPage(false)
-    // setCurrentPageFilter(2)
+    setCurrentPageFilter(2)
     setLoaderN(true)
 
     if (data == 'production') {
       type = 'production'
       setCourseMode('production')
+      localStorage.setItem('mode', 'production');
     } else if (data == 'short-video') {
       type = 'short-video'
       setCourseMode('short-video')
+      localStorage.setItem('mode', 'short-video');
     } else if (data == 'animation') {
       type = 'animation'
       setCourseMode('animation')
+      localStorage.setItem('mode', 'animation');
     } else if (data == 'photoshoot') {
       type = 'photoshoot'
       setCourseMode('photoshoot')
+      localStorage.setItem('mode', 'photoshoot');
     } else {
       type = ''
       setCourseMode('')
+      localStorage.setItem('mode', '');
     }
 
     try {
@@ -230,11 +267,11 @@ const Work = () => {
                             `${process.env.NEXT_PUBLIC_B_API}work/images/thumbnail/` +
                             production.thumbnail
                           }          
-                          className="img-fluid"
+                          // className="img-fluid"
                           style={{
-                          width: '100%',
-                          height: '100%',
-                          objectFit: 'cover',
+                          // width: '100%',
+                          // height: '100%',
+                          // objectFit: 'cover',
                         }}
                       />
                     }
@@ -242,7 +279,7 @@ const Work = () => {
                       <div className="loading-overlay">Loading</div>
                     }
                     restartOnPaused
-                    preload="metadata"
+                    preload="none"
                   />
 
 ): ""}
@@ -263,6 +300,8 @@ const Work = () => {
 
             </div>
           </div>
+
+       
 
           {total > 6 && (
             <div className="text-center pt-4">
