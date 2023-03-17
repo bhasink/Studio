@@ -196,6 +196,7 @@ const WorkDetails = () => {
                     controls={true}
                     showCloseIcon = {true}
                     slidesOffsetAfter={0}
+                    navigation={true}
                     autoplay={{
                       delay: 2500,
                       disableOnInteraction: false,

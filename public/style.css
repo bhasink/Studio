@@ -307,6 +307,18 @@ body {font-family: 'Proxima Nova Rg'; -webkit-font-smoothing: antialiased;
     .whowres .movablelines:after {
        width: 120%;
     }
+
+    .whowres .strsp {
+        position: relative;
+        margin-left: 10px;
+    }
+    
+    .whowres .strsp img {
+        position: absolute;
+        width: 112px;
+        z-index: -2;
+        left: -18px;
+    }
     
     .whowres.aos-init.aos-animate .movablelines:after {
         content: "";
@@ -396,10 +408,24 @@ body {font-family: 'Proxima Nova Rg'; -webkit-font-smoothing: antialiased;
 
     .vdopls div {
         display: block !important;
+     
+    }
+
+    .workshopareas .photolyers.vdopls {
+        height: 208px;
+    }
+   
+    .workshopareas .picshots .photolyers.vdopls{
+        height:auto;
     }
     
     .latestwrk .vdo-sects:hover {
         background: #000;
+    }
+
+    .thmn-footer h3 a {
+        text-decoration: none;
+        color: #000;
     }
 
     /* css for Third Fold Ends Here */
@@ -828,6 +854,12 @@ body {font-family: 'Proxima Nova Rg'; -webkit-font-smoothing: antialiased;
     .topmain .whiteonly {
          display: none;
     }
+
+    .videomanys .swiper-button-prev, 
+    .videomanys .swiper-rtl .swiper-button-next, 
+    .videomanys .swiper-button-next {
+        color: #fff;
+    }
     
     .gallerybooths {
         padding-top: 50px;
@@ -1048,6 +1080,12 @@ body {font-family: 'Proxima Nova Rg'; -webkit-font-smoothing: antialiased;
       /* responsive */
     
     @media screen and (max-width: 767px) and (min-width: 320px){
+
+        .workshopareas.profiledesc  .courseallpnsd.vdo-sects p {
+            -webkit-line-clamp: inherit;
+            margin: 0;
+        }
+
         .homebannnerk.revealer{
             height: 82.9vh;
         }
@@ -1192,7 +1230,7 @@ body {font-family: 'Proxima Nova Rg'; -webkit-font-smoothing: antialiased;
     }
 
     .gallerybooths .swiper-horizontal {
-        padding-bottom: 25px;
+        padding-bottom: 0px;
     }
     
     .videomanys{

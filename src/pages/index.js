@@ -249,7 +249,7 @@ const Index = () => {
           <div className="row">
             <div className="col-md-4 text-center position-relative">
               <h2 className="mnsub">
-                Who are<span className="strsp">we?</span>
+                Who are <span className="strsp"><img src="/images/strokewe.png" /> we?</span>
               </h2>
               <div className="movablelines" />
             </div>
@@ -287,11 +287,13 @@ const Index = () => {
               <div className="container">
                 <div className="row">
                   <div className="col-md-6 vdopls">
+                  <Link href={`work/${featuredItm.slug}`}>
                     <HoverVideoPlayer
                       videoSrc={
                         `${process.env.NEXT_PUBLIC_B_API}work/videos/short-video/` +
                         featuredItm.short_video
                       }
+                      
                       hoverTarget={() =>
                         document.getElementById('hover-target' + key)
                       }
@@ -315,7 +317,7 @@ const Index = () => {
                       }
                       restartOnPaused
                       preload="metadata"
-                    />
+                    /></Link>
                   </div>
                   <div className="col-md-6">
                     <h5>{featuredItm.name}</h5>

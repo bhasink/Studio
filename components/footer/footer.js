@@ -16,13 +16,8 @@ const Footer = () => {
               </ul>
             </div>
             <div className="col-md-4 col-12">
-              <h3>Work</h3>
-              <ul>
-                <li><Link href="/work">Production</Link></li>
-                <li><Link href="/work">Photoshoot</Link></li>
-                <li><Link href="/work">Animation</Link></li>
-                
-              </ul>
+              <h3><Link href="/work">Work</Link></h3>
+              
             </div>
             <div className="col-md-4 col-12">
               <h3>Quick Links</h3>

@@ -29,7 +29,7 @@ body{
     background: #000 !important;
 }
 
-.thmn-footer h3 {
+.thmn-footer h3, .thmn-footer h3 a {
     color: #fff !important;
 }
 
