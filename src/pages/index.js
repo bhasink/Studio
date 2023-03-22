@@ -244,7 +244,7 @@ const Index = () => {
         {/*<img src="./images/mobbanner.jpg" class="mobstopayout img-fluid">*/}
       </section>
 
-      <section className="blpt whowres whtxt d-flex section1">
+      <section className="blpt whowres whtxt d-flex section1" id="about">
         <div className="container align-self-center">
           <div className="row">
             <div className="col-md-4 text-center position-relative">

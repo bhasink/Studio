@@ -11,7 +11,7 @@ const Footer = () => {
             <div className="col-md-4 col-12">
               <h3>About Us</h3>
               <ul>
-                <li><a href="#">About</a></li>
+                <li><a href="#about">About</a></li>
                 {/*  <li><a href="#">Terms &amp; Privacy Policies</a></li>  */}
               </ul>
             </div>
