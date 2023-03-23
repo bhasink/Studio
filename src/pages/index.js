@@ -388,7 +388,7 @@ const Index = () => {
             <div className="row justify-content-center">
               <div className="col-md-2 col-4 blk">
                 <img
-                  src={`${process.env.NEXT_PUBLIC_B_API}/images/swclients/9.png`}
+                  src={`${process.env.NEXT_PUBLIC_B_API}/images/swclients/9new.png?v=4`}
                   className="img-fluid"
                 />
               </div>
@@ -425,7 +425,7 @@ const Index = () => {
               </div>
               <div className="col-md-2 col-4 blk">
                 <img
-                  src={`${process.env.NEXT_PUBLIC_B_API}/images/swclients/1.png`}
+                  src={`${process.env.NEXT_PUBLIC_B_API}/images/swclients/1n.png`}
                   className="img-fluid"
                 />
               </div>
@@ -461,7 +461,7 @@ const Index = () => {
               </div>
               <div className="col-md-2 col-4 blk">
                 <img
-                  src={`${process.env.NEXT_PUBLIC_B_API}/images/swclients/11.png`}
+                  src={`${process.env.NEXT_PUBLIC_B_API}/images/swclients/11new.png?v=22`}
                   className="img-fluid"
                 />
               </div>
@@ -502,13 +502,44 @@ const Index = () => {
 
               <div className="col-md-2 col-4 blk">
                 <img
-                  src={`${process.env.NEXT_PUBLIC_B_API}/images/swclients/17.png`}
+                  src={`${process.env.NEXT_PUBLIC_B_API}/images/swclients/17new.png?v=2`}
                   className="img-fluid"
                 />
               </div>
+
               <div className="col-md-2 col-4 blk">
                 <img
                   src={`${process.env.NEXT_PUBLIC_B_API}/images/swclients/15.png`}
+                  className="img-fluid"
+                />
+              </div>
+
+              <div className="col-md-2 col-4 blk">
+                <img
+                  src={`${process.env.NEXT_PUBLIC_B_API}/images/swclients/23.png`}
+                  className="img-fluid"
+                />
+              </div>
+
+              
+
+              <div className="col-md-2 col-4 blk">
+                <img
+                  src={`${process.env.NEXT_PUBLIC_B_API}/images/swclients/22.png?v=2`}
+                  className="img-fluid"
+                />
+              </div>
+
+             <div className="col-md-2 col-4 blk">
+                <img
+                  src={`${process.env.NEXT_PUBLIC_B_API}/images/swclients/25.png?v=2`}
+                  className="img-fluid"
+                />
+              </div>
+
+              <div className="col-md-2 col-4 blk">
+                <img
+                  src={`${process.env.NEXT_PUBLIC_B_API}/images/swclients/24.png`}
                   className="img-fluid"
                 />
               </div>
@@ -543,7 +574,7 @@ const Index = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="col-md-2">
+                <div className="col-md-2 loolesscrf">
                   <label>
                     <b>I’m looking for</b>
                   </label>
@@ -571,7 +602,7 @@ const Index = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="col-md-2">
+                <div className="col-md-2 loolesscrf">
                   <label>
                     <b>Contact me on</b>
                   </label>
@@ -585,7 +616,7 @@ const Index = () => {
                     className="form-control"
                   />
                 </div>
-                <div className="col-md-2">
+                <div className="col-md-2 dropleswdths">
                   <label>
                     <b>Drop a mail at</b>
                   </label>

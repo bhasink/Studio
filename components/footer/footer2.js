@@ -67,8 +67,8 @@ const Footer2 = () => {
           <div className="col-md-4">
             <div className="socials">
               <ul>
-                <li><a href="#"><i className="fab fa-youtube" /></a></li>
-                <li><a href="#"><i className="fab fa-vimeo-v" /></a></li>
+                <li><a target="_blank" rel="noreferrer" href="https://instagram.com/swstudiosofficial?igshid=YmMyMTA2M2Y="><i class="fab fa-instagram"/></a></li>
+                
               </ul>
             </div>
           </div>
