@@ -1134,6 +1134,11 @@ body {font-family: 'Proxima Nova Rg'; -webkit-font-smoothing: antialiased;
     @media screen and (max-width: 767px) and (min-width: 320px){
 /* css for menu new mobile */
 
+.gallerybooths .swiper-button-prev:after, .gallerybooths .swiper-rtl .swiper-button-next:after,
+.gallerybooths .swiper-button-next:after, .gallerybooths .swiper-rtl .swiper-button-prev:after{
+    font-size: 27px;
+}
+
 .lgo {
     margin-top: -61px;
 }
