@@ -1125,9 +1125,54 @@ body {font-family: 'Proxima Nova Rg'; -webkit-font-smoothing: antialiased;
         z-index: 8;
     }
 
+    .copyrgts.mobilemnon{
+        display: none;
+    }
+
       /* responsive */
     
     @media screen and (max-width: 767px) and (min-width: 320px){
+/* css for menu new mobile */
+
+.lgo {
+    margin-top: -61px;
+}
+
+.site-header.topmain .navbar .navbar-nav li a {
+    font-size: 27px;
+    font-weight: 600;
+}
+
+
+.site-header.topmain .navbar .navbar-nav {
+    text-align: center;
+    margin: auto;
+}
+
+.copyrgts.mobilemnon {
+    position: relative;
+    left: 0;
+    bottom: 24px;
+    padding: 0 0 30px 0;
+    margin-bottom: 65px;
+}
+
+.copyrgts.mobilemnon a, .copyrgts.mobilemnon p {
+    color: #fff;
+}
+
+
+.copyrgts.mobilemnon .socials {
+    margin-bottom: 11px;
+}
+        .site-header.topmain.mobexheight.scrolling_down.navfixed{
+            transform:translateY(-68px)
+        }
+        .site-header.topmain.mobexheight.scrolling_down, 
+        .site-header.topmain.mobexheight.heightexps.scrolling_down{
+            
+            transform: translateY(0px);
+        }
 
         .mnformsty .col-md-2, .mnformsty .col-md-4, .mnformsty .col-md-3{
         margin-bottom: 5px;
@@ -1199,13 +1244,14 @@ body {font-family: 'Proxima Nova Rg'; -webkit-font-smoothing: antialiased;
     }
     
     .site-header.topmain.heightexps .collapse:not(.show) {
-        display: block;
+        display: flex;
+    flex-direction: column;
         position: fixed;
         top: 0;
         background:#000;
         width: 100%;
         left: 0;
-        padding: 20px;
+        padding: 0px;
         height: 100vh;
         transition: all ease 0.5s;
         transform: translateX(0px);

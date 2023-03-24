@@ -97,6 +97,24 @@ $(function() {
               </Link>
             </li>
           </ul>
+
+          <div className="copyrgts text-center mobilemnon">
+      <div className="container">
+        <div className="row">
+          <div className="col-md-4">
+            <div className="socials">
+              <ul>
+              <li><a href="https://instagram.com/swstudiosofficial?igshid=YmMyMTA2M2Y="><i class="fab fa-instagram"/></a></li>
+                
+              </ul>
+            </div>
+          </div>
+          <div className="col-md-8 text-center text-lg-right">
+            <p className="leftsxts">Copyright © 2023. Business Entity: Sociowash. All Rights Reserved.</p>
+          </div>
+        </div>
+      </div>
+    </div>
        
       </div>
       {/* Toggler */}
