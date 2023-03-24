@@ -14,14 +14,14 @@ function Loading() {
   const [img, setImg] = useState(null)
 
   useEffect(() => {
-    setImg('anim.gif')
+    setImg('anim4.gif')
     const handleStart = (url) => url !== router.asPath && setLoading(true)
     const handleComplete = (url) =>
       url === router.asPath &&
       setTimeout(() => {
         setLoading(false)
         setImg(null)
-      }, 2000)
+      }, 1000)
 
     router.events.on('routeChangeStart', handleStart)
     router.events.on('routeChangeComplete', handleComplete)
@@ -66,7 +66,7 @@ function MyApp({ Component, pageProps }) {
   const [loading, setLoading] = useState(false);
   
   useEffect(() =>{
-    setTimeout(() => setLoading(true), 2000);
+    setTimeout(() => setLoading(true), 1000);
    })
 
   return (
@@ -86,7 +86,7 @@ function MyApp({ Component, pageProps }) {
             <div className="lgo">
               <img
                 src={
-                  `${process.env.NEXT_PUBLIC_B_API}anim.gif`
+                  `${process.env.NEXT_PUBLIC_B_API}anim4.gif`
                 }
                 className="navbar-brand-img blg"
                 alt="logo"
