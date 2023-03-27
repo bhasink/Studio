@@ -255,11 +255,8 @@ const Index = () => {
             </div>
             <div className="col-md-8 mwd-tx">
               <p>
-                Dedicated in creating <span>quality content,</span>
-                <br />
-                SW Studios fuses emotions with brand and
-                <br />
-                product stories to create timeless assets.
+                Dedicated in creating <span>quality content,</span><br /> SW Studios fuses emotions with brand and
+                 <br /> product stories to create timeless assets.
               </p>
               <p>
                 We're <span>young, full of energy,</span> and{' '}
