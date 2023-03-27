@@ -261,8 +261,7 @@ const Index = () => {
               <p>
                 We're <span>young, full of energy,</span> and{' '}
                 <span>passionate</span>
-                <br />
-                about what we do.
+                <br /> about what we do.
               </p>
             </div>
           </div>
