@@ -75,9 +75,9 @@ function MyApp({ Component, pageProps }) {
 <Head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0" />
-        <title>SWA Studios</title>
+        <title>SW Studios</title>
         <link href="https://api.swstudios.in//images/Favicon.png" rel="shortcut icon" type="image/x-icon" />
-        </Head>
+        </Head>  
 
 
      {!loading ? (
