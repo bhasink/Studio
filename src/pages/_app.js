@@ -77,6 +77,7 @@ function MyApp({ Component, pageProps }) {
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0" />
         <title>SW Studios</title>
         <link href="https://api.swstudios.in//images/Favicon.png" rel="shortcut icon" type="image/x-icon" />
+
         </Head>  
 
 
