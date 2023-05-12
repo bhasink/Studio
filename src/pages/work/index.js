@@ -7,6 +7,7 @@ import { useRouter } from 'next/router'
 import axios from 'axios'
 import Head from 'next/head'
 import ContentLoader from 'react-content-loader'
+import YouTube from 'react-youtube'
 
 const Work = () => {
   const [productionData, setProductionData] = useState([])
@@ -97,6 +98,10 @@ const Work = () => {
       type = 'photoshoot'
       setCourseMode('photoshoot')
       localStorage.setItem('mode', 'photoshoot');
+    }else if (data == 'reels') {
+      type = 'reels'
+      setCourseMode('reels')
+      localStorage.setItem('mode', 'reels');
     } else {
       type = ''
       setCourseMode('')
@@ -165,6 +170,16 @@ const Work = () => {
     }
   }
 
+  const opts = {
+    height: '460',
+    width: '315',
+    playerVars: {
+      autoplay: 0,
+      modestbranding: 1,
+      rel: 0,
+    },
+  }
+
   return (
     <>
       <Header2 />
@@ -204,6 +219,17 @@ const Work = () => {
               }
             >
               Photoshoot
+            </button>
+
+            <button
+              onClick={() => filtersLoadMore('reels')}
+              className={
+                courseMode == 'reels'
+                  ? 'btn-group btn-group-toggle active'
+                  : 'btn-group btn-group-toggle'
+              }
+            >
+              Reels
             </button>
           </div>
 
@@ -250,6 +276,13 @@ const Work = () => {
                     />
 
                     )} 
+
+
+{production.file_type == 'reels' && (           
+                 
+                 <YouTube videoId={production.original_video} opts={opts}  />
+
+                 )} 
 
 
 {production.file_type == 'animation' || production.file_type == 'production' ? (           
