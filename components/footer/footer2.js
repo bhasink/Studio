@@ -19,6 +19,7 @@ const Footer2 = () => {
               <h3>Work with us</h3>
               <ul>
                 <li><Link href="https://www.sociowash.com/career.html" target="_blank" rel="noreferrer">Careers </Link></li>
+                
               </ul>    
             </div>
             <div className="col-md-4 col-12">
