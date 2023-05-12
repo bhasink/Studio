@@ -24,6 +24,7 @@ const Footer = () => {
               <ul>
                 <li><Link href="/#clients">Clients</Link></li>
                 <li><Link href="/#getintouch">Get in Touch</Link></li>
+                <li><Link href="https://www.sociowash.com/career.html" target="_blank" rel="noreferrer">Careers </Link></li>
                 
               </ul>
             </div>
