@@ -16,14 +16,16 @@ const Footer2 = () => {
               </ul>
             </div>
             <div className="col-md-4 col-12">
-              <h3><Link href="/work">Work</Link></h3>    
+              <h3>Work with us</h3>
+              <ul>
+                <li><Link href="https://www.sociowash.com/career.html" target="_blank" rel="noreferrer">Careers </Link></li>
+              </ul>    
             </div>
             <div className="col-md-4 col-12">
               <h3>Quick Links</h3>
               <ul>
                 <li><Link href="/#clients">Clients</Link></li>
                 <li><Link href="/#getintouch">Get in Touch</Link></li>
-                <li><Link href="https://www.sociowash.com/career.html" target="_blank" rel="noreferrer">Careers </Link></li>
               </ul>
             </div>
             {/* <div className="col-md-5">
