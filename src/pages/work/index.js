@@ -236,9 +236,15 @@ const Work = () => {
           <div
             className={
               courseMode == 'photoshoot'
-                ? 'courseallpnsd vdo-sects picshots'
-                : 'courseallpnsd vdo-sects'
-            }
+                ? 
+                'courseallpnsd vdo-sects picshots'
+                : 
+                courseMode == 'reels' 
+                ?
+                 'courseallpnsd vdo-sects reelshots' 
+                :'courseallpnsd vdo-sects'
+                
+            } 
           >
             <div className="row">
             

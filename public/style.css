@@ -414,6 +414,33 @@ body {font-family: 'Proxima Nova Rg'; -webkit-font-smoothing: antialiased;
     .workshopareas .photolyers.vdopls {
         height: 214px;
     }
+
+    .workshopareas .vdo-sects.reelshots .photolyers.vdopls {
+        height: auto;
+        text-align: center;
+    }
+
+    .courseallpnsd.vdo-sects.reelshots {
+        margin: 50px 46px 0;
+    }
+    
+    .workshopareas .vdo-sects.reelshots .photolyers.vdopls iframe {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    
+    .workshopareas .vdo-sects.reelshots .photolyers.vdopls  {
+        position: relative;
+        width: 82%;
+        max-width: 284px;
+        height: 500px;
+        margin: auto;
+    }
+    
+   
    
     .workshopareas .picshots .photolyers.vdopls{
         height:auto;
