@@ -16,6 +16,7 @@ import dynamic from 'next/dynamic'
 const OwlCarousel = dynamic(() => import('react-owl-carousel'), {
   ssr: false,
 })
+import { NextSeo } from 'next-seo'
 // import { gsap } from 'gsap/dist/gsap'
 // import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 import { notification } from 'antd'
@@ -213,6 +214,12 @@ const Index = () => {
 
   return (
     <>
+
+    <NextSeo
+        title="SW Studios - Best Production Studio in India"
+        description="SW Studios is a leading Integrated Production agency in India that provides high-quality video film services."
+      />
+
       <Header />
     <div className='mainhome'>
       <section className="blpt homebannnerk revealer">
