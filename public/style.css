@@ -1393,10 +1393,18 @@ body {font-family: 'Proxima Nova Rg'; -webkit-font-smoothing: antialiased;
 
     .tabnormcta {
         display: flex;
-        width: 90%;
-        max-width: 90%;
+        width: 100%;
+        max-width: 100%;
         margin: auto;
 
+    }
+
+    .workshopareas .vdo-sects.reelshots .photolyers.vdopls{
+        width: 100%;
+    }
+
+    .courseallpnsd.vdo-sects.reelshots {
+        margin: 50px 7px 0;
     }
     
     .tabnormcta button {

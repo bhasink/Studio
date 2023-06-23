@@ -221,7 +221,7 @@ const Work = () => {
               Photoshoot
             </button>
 
-            {/* <button
+            { <button
               onClick={() => filtersLoadMore('reels')}
               className={
                 courseMode == 'reels'
@@ -230,7 +230,7 @@ const Work = () => {
               }
             >
               Reels
-            </button> */}
+            </button> }
           </div>
 
           <div
