@@ -328,7 +328,17 @@ const Work = () => {
                     </div>
                     <h5>{production.name}</h5>
                     <p>{production.short_desc}</p>
-                    <Link href={`work/${production.slug}`}>Read More</Link>
+
+                    {production.file_type != 'reels' && (           
+                 
+                
+                 <Link href={`work/${production.slug}`}>Read More</Link>
+                 )} 
+
+
+                   
+
+
                     </div>
                   </div>
                 ))}
