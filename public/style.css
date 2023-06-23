@@ -436,6 +436,8 @@ body {font-family: 'Proxima Nova Rg'; -webkit-font-smoothing: antialiased;
     .workshopareas .vdo-sects.reelshots .laysets{
         width: 82%;
         max-width: 284px;
+        margin:auto; 
+
     }
     .workshopareas .vdo-sects.reelshots .photolyers.vdopls  {
         position: relative;
