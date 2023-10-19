@@ -216,8 +216,8 @@ const Index = () => {
     <>
 
     <NextSeo
-        title="SW Studios - Best Production Studio in India"
-        description="SW Studios is a leading Integrated Production agency in India that provides high-quality video film services."
+        title="SW Studios - Best Production Studio in India By Sociowash"
+        description="SW Studios or Sociowash Studios is a leading Integrated Production agency in India that provides high-quality video film services."
       />
 
       <Header />
