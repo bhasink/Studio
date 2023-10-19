@@ -54,13 +54,14 @@ const Footer = () => {
         <div className="col-md-4 col-6">
           <div className="footer-mail">
             <p className="locn">Delhi</p>
-            <p>Red Brick Centre, 2nd Floor, Plot No,<br />
-              258, Lane 3, Westend Marg, Saidulajab,<br />
-              Saket, New Delhi, Delhi 110030</p>
+            <p>Delhi - E-40/ 7, Second Floor, <br />
+            Okhla Industrial Area, Phase 2, New Delhi- 110020, <br />
+            New Delhi, India</p>
           </div>
           <div className="footer-mail">
             <p className="locn">Mumbai</p>
-            <p>603 The Co-working Space, 1F, 27 MIDC, Marol<br /> MIDC Industry Estate, Andheri East, Mumbai,<br /> Maharashtra 400047</p>
+            <p>Ackruti Softech Park, 3rd Floor, <br />Shree Krishna Nagar, Marol MIDC Industry Estate, <br /> Andheri East, Mumbai 400093</p>
+           {/* <p>603 The Co-working Space, 1F, 27 MIDC, Marol<br /> MIDC Industry Estate, Andheri East, Mumbai,<br /> Maharashtra 400047</p> */}
           </div>
         </div>
       </div>
