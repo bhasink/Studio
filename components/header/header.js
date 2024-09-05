@@ -73,7 +73,7 @@ $(function() {
 
 
         <img src={
-                  `${process.env.NEXT_PUBLIC_B_API}/images/logo.svg`
+                  `${process.env.NEXT_PUBLIC_B_API}/images/swlogo.svg`
                 }  className="navbar-brand-img" alt="logo" />
        {/*<img src="/images/logoblack.svg" className="navbar-brand-img" alt="logo" /> */} 
       </Link>

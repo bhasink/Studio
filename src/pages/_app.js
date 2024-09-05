@@ -89,7 +89,7 @@ function MyApp({ Component, pageProps }) {
             <div className="lgo">
               <img
                 src={
-                  `${process.env.NEXT_PUBLIC_B_API}anim4.gif`
+                  `${process.env.NEXT_PUBLIC_B_API}sws_anime.gif`
                 }
                 className="navbar-brand-img blg"
                 alt="logo"

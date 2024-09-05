@@ -194,7 +194,7 @@ body {font-family: 'Proxima Nova Rg'; -webkit-font-smoothing: antialiased;
       
       /* Handle on hover */
       ::-webkit-scrollbar-thumb:hover {
-        background: #fd6a02; 
+        background: #f3eb16; 
       }
     
     
@@ -260,7 +260,7 @@ body {font-family: 'Proxima Nova Rg'; -webkit-font-smoothing: antialiased;
     }
     
     .whowres p span{
-         color: #fd6a02;
+         color: #f3eb16;
     }
     
     .mnsub {
@@ -293,7 +293,7 @@ body {font-family: 'Proxima Nova Rg'; -webkit-font-smoothing: antialiased;
     }
     
     .movablelines {
-        background: url('./images/arrowstro.png');
+        background: url('./images/arrowstro-yellow.png');
         position: absolute;
         top: -7px;
         right: -104px;
@@ -367,8 +367,8 @@ body {font-family: 'Proxima Nova Rg'; -webkit-font-smoothing: antialiased;
     }
     
     
-    .latestwrk  .vdo-sects:hover h5{
-            color: #fd6a02;
+    .latestwrk .vdo-sects:hover h5{
+            color: #f3eb16;
     }
     
     
@@ -493,7 +493,7 @@ body {font-family: 'Proxima Nova Rg'; -webkit-font-smoothing: antialiased;
     .bdorg {
         width: 100%;
         height: 3px;
-        border-bottom: 1px solid #fd6a02;
+        border-bottom: 1px solid #f3eb16;
         margin: 20px 0;
     } 
     
@@ -585,7 +585,7 @@ body {font-family: 'Proxima Nova Rg'; -webkit-font-smoothing: antialiased;
         padding: 3px 28px;
         background: transparent;
         color: #fff;
-        border: 1px solid #fd6a02;
+        border: 1px solid #f3eb16;
         font-family: 'Proxima Nova Rg';
         margin: 35px 0 0 0;
         outline: none;
@@ -606,7 +606,7 @@ body {font-family: 'Proxima Nova Rg'; -webkit-font-smoothing: antialiased;
     }
     
     .mnformsty .form-control:focus, .mnformsty .form-control:hover {
-        box-shadow: 0px 1px 0 0px rgb(236 99 2 / 78%);
+        box-shadow: 0px 1px 0 0px rgb(243 235 22 / 78%);;
         border-bottom: 1px solid transparent;
     }
     
@@ -649,7 +649,7 @@ body {font-family: 'Proxima Nova Rg'; -webkit-font-smoothing: antialiased;
     
     .copyrgts {
         padding: 50px 0 30px;
-        border-bottom: 4px solid #fd6a02;
+        border-bottom: 4px solid #f3eb16;
     }
     
     .thmn-footer h3 {
@@ -745,7 +745,7 @@ body {font-family: 'Proxima Nova Rg'; -webkit-font-smoothing: antialiased;
     .tabnormcta button.active {
         font-family: 'Proxima Nova Rg';
         font-weight: 600;
-        border-bottom: 2px solid #fd6a02;
+        border-bottom: 2px solid #f3eb16;
     }
     
     .courseallpnsd {
@@ -763,7 +763,7 @@ body {font-family: 'Proxima Nova Rg'; -webkit-font-smoothing: antialiased;
     }
     
     .vdo-sects.vddetails h5 {
-        color: #fd6a02;
+        color: #f3eb16;
             margin: 0 0 15px 0;
     }
     
@@ -866,7 +866,7 @@ body {font-family: 'Proxima Nova Rg'; -webkit-font-smoothing: antialiased;
     }
     
     .orangectathms:hover {
-        border: 1px solid #fd6a02;
+        border: 1px solid #f3eb16;
     }
     
     /* css for button */
@@ -932,6 +932,7 @@ body {font-family: 'Proxima Nova Rg'; -webkit-font-smoothing: antialiased;
 
     .gallerybooths .mainhd .cntheads {
         font-size: 30px;
+        color: #fff;
     }
     
     
@@ -1020,7 +1021,7 @@ body {font-family: 'Proxima Nova Rg'; -webkit-font-smoothing: antialiased;
       
       .vdo-sects p, .vdo-sects a {
         font-size: 15px;
-        color: #000;
+        color: #fff;
         text-decoration: none;
         transition: all ease 0.5s;
         font-family: Proxima Nova Rg;
@@ -1046,7 +1047,7 @@ body {font-family: 'Proxima Nova Rg'; -webkit-font-smoothing: antialiased;
       .mainhd .cntheads span {
         font-family: "Aurelie Smith DEMO";
         font-size: 99px;
-        color: #fd6a02;
+        color: #f3eb16;
         display: inline-block;
         font-weight: 100;
         line-height: 69px;
@@ -1080,7 +1081,12 @@ body {font-family: 'Proxima Nova Rg'; -webkit-font-smoothing: antialiased;
       }
       
       .vdo-sects h5, .vdo-sects p, .vdo-sects a {
-        color: #000000;
+        color: #000;
+      }
+
+      .workshopareas .vddetails p,
+      .workshopareas .vddetails a {
+        color: #fff;
       }
       
       
@@ -1170,6 +1176,51 @@ body {font-family: 'Proxima Nova Rg'; -webkit-font-smoothing: antialiased;
 
     .copyrgts.mobilemnon{
         display: none;
+    }
+
+
+    .mainhome section.whtpt.latestwrk h4.cntheads span {
+        color: #000;
+        position: relative;
+    }
+
+    .mainhome section.whtpt.latestwrk h4.cntheads span:before {
+        content: '';
+        width: 85%;
+        height: 1.5px;
+        display: block;
+        position: absolute;
+        bottom: 10px;
+        left: 0;
+        right: 0;
+        background: #000;
+        transform: rotate(356deg);
+    }
+
+    .mainhome section.gallerybooths {
+        background: #000;
+    }   
+
+    .mainhome section.workshopareas.profiledesc {
+        background: #000;
+    }
+
+    .mainhome section#clients .mainhd .cntheads span {
+        color: #000;
+        position: relative;
+    }
+
+    .mainhome section#clients .mainhd .cntheads span:before {
+        content: '';
+        width: 85%;
+        height: 1.5px;
+        display: block;
+        position: absolute;
+        bottom: 10px;
+        left: 0;
+        right: 0;
+        background: #000;
+        transform: rotate(356deg);
     }
 
       /* responsive */

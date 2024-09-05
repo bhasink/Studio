@@ -256,7 +256,7 @@ const Index = () => {
           <div className="row">
             <div className="col-md-4 text-center position-relative">
               <h2 className="mnsub">
-                Who are <span className="strsp"><img src="/images/strokewe.png" /> we?</span>
+                Who are <span className="strsp"><img src="/images/strokewe-yellow.png" /> we?</span>
               </h2>
               <div className="movablelines" />
             </div>
@@ -335,8 +335,8 @@ const Index = () => {
         <div className="morevdo">
           <div className="container">
             <Link href="/work" className="mnsub">
-              View more <span  className="strsp"><img src="./images/strokewe.png"/> work </span>{' '}
-              <img src="./images/mrarr.png" />
+              View more <span  className="strsp"><img src="./images/strokewe-yellow.png"/> work </span>{' '}
+              <img src="./images/mrarr-yellow.png" />
             </Link>
           </div>
         </div>
