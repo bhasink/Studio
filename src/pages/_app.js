@@ -14,7 +14,7 @@ function Loading() {
   const [img, setImg] = useState(null)
 
   useEffect(() => {
-    setImg('anim4.gif')
+    setImg('sws_anime.gif?v=1')
     const handleStart = (url) => url !== router.asPath && setLoading(true)
     const handleComplete = (url) =>
       url === router.asPath &&
