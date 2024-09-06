@@ -77,7 +77,7 @@ function MyApp({ Component, pageProps }) {
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0" />
         <meta name="google-site-verification" content="LBCBAXhyCpyhKJBaIJcpwox1qd_HbXb1KuVc4yve4-Y" />
         <title>SW Studios - Best Production Studio in India By Sociowash</title>
-        <link href="https://api.swstudios.in//images/Favicon.png" rel="shortcut icon" type="image/x-icon" />
+        <link href="https://api.swstudios.in//images/favicon_sw.png" rel="shortcut icon" type="image/x-icon" />
        
         </Head>  
 
@@ -89,7 +89,7 @@ function MyApp({ Component, pageProps }) {
             <div className="lgo">
               <img
                 src={
-                  `${process.env.NEXT_PUBLIC_B_API}sws_anime.gif`
+                  `${process.env.NEXT_PUBLIC_B_API}sws_anime.gif?v=1`
                 }
                 className="navbar-brand-img blg"
                 alt="logo"
