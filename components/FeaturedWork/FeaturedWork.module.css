@@ -1,0 +1,157 @@
+.featuredSection {
+  padding: 4rem 0;
+  background: #ffffff;
+}
+
+.loadingSection {
+  padding: 4rem 0;
+  background: #ffffff;
+}
+
+.loading {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #666;
+  padding: 2rem;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  color: #333;
+  position: relative;
+}
+
+.sectionTitle span {
+  color: #fd6a02;
+}
+
+.videoSection {
+  margin-bottom: 4rem;
+  padding: 2rem 0;
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.videoSection:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.workContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.workTitle {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.workDescription {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.readMoreLink {
+  color: #fd6a02;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  align-self: flex-start;
+}
+
+.readMoreLink:hover {
+  color: #e55a00;
+  text-decoration: underline;
+}
+
+.loadingOverlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  font-weight: 600;
+}
+
+.moreWork {
+  text-align: center;
+  padding: 3rem 0;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.moreLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #fd6a02;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.moreLink:hover {
+  transform: translateX(10px);
+  color: #e55a00;
+}
+
+.photoshootSection {
+  padding: 4rem 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.photoshootSection .sectionTitle {
+  color: white;
+}
+
+.photoshootSection .sectionTitle span {
+  color: #ffd700;
+}
+
+@media (max-width: 768px) {
+  .sectionTitle {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .videoSection {
+    margin-bottom: 2rem;
+  }
+  
+  .workContent {
+    padding: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .workTitle {
+    font-size: 1.5rem;
+  }
+  
+  .workDescription {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .featuredSection {
+    padding: 2rem 0;
+  }
+  
+  .sectionTitle {
+    font-size: 1.75rem;
+  }
+  
+  .workTitle {
+    font-size: 1.25rem;
+  }
+}
